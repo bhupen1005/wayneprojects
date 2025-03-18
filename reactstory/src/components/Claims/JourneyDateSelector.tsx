@@ -1,41 +1,7 @@
-import { useRef, useState } from "react";
-import {
-  Group,
-  Card,
-  Text,
-  Stack,
-  Box,
-  Grid,
-  ThemeIcon,
-  Center,
-  Divider,
-  Button,
-  TextInput,
-  Anchor,
-  Flex,
-  Image,
-  Table,
-  NativeSelect,
-  FileInput,
-  ActionIcon,
-  Autocomplete,
-} from "../Common";
-import {
-  IconCalendar,
-  IconCheck,
-  IconChevronDown,
-  IconChevronUp,
-  IconCreditCard,
-  IconDownload,
-  IconPhoto,
-  IconSearch,
-  IconTicket,
-  IconTrash,
-  IconUpload,
-  IconUser,
-  IconX,
-} from "@tabler/icons-react";
 import { DatePickerInput } from "@mantine/dates";
+import { IconCalendar } from "@tabler/icons-react";
+import { useRef, useState } from "react";
+import { Card, Group, Stack, Text } from "../Common";
 
 const generatePastDates = () => {
   const dates = [];
@@ -63,7 +29,7 @@ export const JourneyDateSelector = ({ onDateChange }: DateSelectorProps) => {
   const [value, setValue] = useState<Date | null>(null);
 
   const [selectedDate, setSelectedDate] = useState<string>(
-    generatePastDates()[0].day
+    generatePastDates()[0].day,
   );
 
   const travelDateRef = useRef<HTMLButtonElement>(null);

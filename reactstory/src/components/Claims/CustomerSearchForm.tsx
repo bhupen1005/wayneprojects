@@ -1,43 +1,7 @@
-import { useRef, useState } from "react";
-import {
-  Group,
-  Card,
-  Text,
-  Stack,
-  Box,
-  Grid,
-  ThemeIcon,
-  Center,
-  Divider,
-  Button,
-  TextInput,
-  Anchor,
-  Flex,
-  Image,
-  Table,
-  NativeSelect,
-  FileInput,
-  ActionIcon,
-  Autocomplete,
-} from "../Common";
-import {
-  IconCalendar,
-  IconCheck,
-  IconChevronDown,
-  IconChevronUp,
-  IconCreditCard,
-  IconDownload,
-  IconPhoto,
-  IconSearch,
-  IconTicket,
-  IconTrash,
-  IconUpload,
-  IconUser,
-  IconX,
-} from "@tabler/icons-react";
-import { Dropzone, FileWithPath } from "@mantine/dropzone";
-import { DatePickerInput } from "@mantine/dates";
 import { rem } from "@mantine/core";
+import { IconSearch } from "@tabler/icons-react";
+import { useRef, useState } from "react";
+import { Autocomplete, Button, Flex } from "../Common";
 
 // Interface for props
 interface CustomerSearchProps {

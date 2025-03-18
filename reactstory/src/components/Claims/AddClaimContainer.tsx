@@ -3,7 +3,6 @@ import {
   CustomerLineSVGrenderer,
   EuroLineSVGrenderer,
   QuestionLineSVGrenderer,
-  TicketIconSVGrenderer,
   TicketLineSVGrenderer,
   TrainLineSVGrenderer,
 } from "../SVGRenderer";

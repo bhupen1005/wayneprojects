@@ -1,43 +1,5 @@
-import { useRef, useState } from "react";
-import {
-  Group,
-  Card,
-  Text,
-  Stack,
-  Box,
-  Grid,
-  ThemeIcon,
-  Center,
-  Divider,
-  Button,
-  TextInput,
-  Anchor,
-  Flex,
-  Image,
-  Table,
-  NativeSelect,
-  FileInput,
-  ActionIcon,
-  Autocomplete,
-} from "../Common";
-import {
-  IconCalendar,
-  IconCheck,
-  IconChevronDown,
-  IconChevronUp,
-  IconCreditCard,
-  IconDownload,
-  IconPhoto,
-  IconSearch,
-  IconTicket,
-  IconTrash,
-  IconUpload,
-  IconUser,
-  IconX,
-} from "@tabler/icons-react";
-import { Dropzone, FileWithPath } from "@mantine/dropzone";
-import { DatePickerInput } from "@mantine/dates";
-import { rem } from "@mantine/core";
+import { IconUser } from "@tabler/icons-react";
+import { Card, Grid, Group, Stack, Text, ThemeIcon } from "../Common";
 
 interface AboutSectionProps {
   title?: string;

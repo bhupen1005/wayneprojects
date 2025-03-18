@@ -1,7 +1,7 @@
-import { CustomerSearchForm } from "@/stories/CustomerSearchForm.stories";
-import { Box, Flex, Grid } from "../Common";
 import { CustomerAboutInfo } from "@/stories/CustomerAboutInfo.stories";
 import { CustomerAddressInfo } from "@/stories/CustomerAddressInfo.stories";
+import { CustomerSearchForm } from "@/stories/CustomerSearchForm.stories";
+import { Grid } from "../Common";
 
 export const CustomerDetailsContainer = () => {
   return (
