@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "leanne@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "ervin@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "clementine@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Leanne",
+      "username": "Bret",
+      "email": "leanne2@example.com"
+    }
+  ],
+  "posts": [
+    { "id": 1, "title": "Post 1", "content": "Content 1" },
+    { "id": 2, "title": "Post 2", "content": "Content 2" },
+    { "id": 3, "title": "Post 3", "content": "Content 3" },
+    { "id": 4, "title": "Post 4", "content": "Content 4" }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project 1",
+      "description": "Description 1",
+      "manager": "Leanne Graham",
+      "developers": ["Leanne Graham", "Ervin Howell"]
+    },
+    {
+      "id": 2,
+      "name": "Project 2",
+      "description": "Description 2",
+      "manager": "Ervin Howell",
+      "developers": ["Leanne Graham", "Ervin Howell"]
+    },
+    {
+      "id": 3,
+      "name": "Project 3",
+      "description": "Description 3",
+      "manager": "Clementine Bauch",
+      "developers": ["Leanne Graham", "Ervin Howell"]
+    },
+    {
+      "id": 4,
+      "name": "Project 4",
+      "description": "Description 4",
+      "manager": "Leanne",
+      "developers": ["Leanne Graham", "Ervin Howell"]
+    }
+  ]
+}
