@@ -18,10 +18,10 @@
         "name": "next"
       }
     ],
-    "baseUrl": "src/",
+    "baseUrl": "src/", // This is the path to your source files
     "paths": {
-      "@/styles/*": ["styles/*"],
-      "@/components/*": ["components/*"]
+      "@/styles/*": ["styles/*"], // This is the path to your styles
+      "@/components/*": ["components/*"] // This is the path to your components
     }
   },
   "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],

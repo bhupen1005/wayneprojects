@@ -45,6 +45,3 @@ a(10);
 // a(1) // go tenth in the stack
 // a(0) // base case
 
-321123
-5432112345
-
