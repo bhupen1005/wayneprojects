@@ -3,6 +3,8 @@ import { Suspense } from "react";
 import { ComputerModel } from "./ComputerModel";
 import { OrbitControls, PerspectiveCamera, Stage } from "@react-three/drei";
 
+// adding 3d object to the canvas
+// Go to the tutorial to see the full explanation
 const ComputerModelContainer = () => {
   return (
     <Canvas>
@@ -10,8 +12,8 @@ const ComputerModelContainer = () => {
         <Stage environment="night" intensity={0.5}>
           <ComputerModel />
         </Stage>
-        <OrbitControls enableZoom={false} autoRotate/>
-        <PerspectiveCamera position={[-1,0,1.8]} zoom={0.8} makeDefault/>
+        <OrbitControls enableZoom={false} autoRotate />
+        <PerspectiveCamera position={[-1, 0, 1.8]} zoom={0.8} makeDefault />
       </Suspense>
     </Canvas>
   );

@@ -1,5 +1,7 @@
 import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 
+
+// 3d blob shape using threejs
 const Shape = () => {
   return (
     <>

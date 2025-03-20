@@ -2,6 +2,8 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "motion/react";
 
 const Speech = () => {
+
+  // Typing animation with your favorite text
   return (
     <motion.div
       className="bubbleContainer"

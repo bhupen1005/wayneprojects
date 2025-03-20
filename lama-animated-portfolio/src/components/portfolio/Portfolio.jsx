@@ -141,6 +141,8 @@ const Portfolio = () => {
     };
   }, []);
 
+
+  // scrollYProgress is a reactive value provided by the useScroll hook. It represents the vertical scroll progress of the target element
   const { scrollYProgress } = useScroll({ target: ref });
 
   const xTranslate = useTransform(
