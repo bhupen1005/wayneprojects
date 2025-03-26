@@ -1,0 +1,70 @@
+// INFO:  This project is around keeping a centralized state for managing the complex UI.
+
+
+
+// IMPORTANT:  When we have Buttons, we use Button IDs to identify them
+// we can use the ID's to hide or show the buttons
+// we can use the ID's to change the text of the buttons
+// we can use the ID's to change the color of the buttons
+
+// TIP: // we use actions when send the events with a payload similar to below
+// send({ type: "toggleJourney", journeyId: journey.id })
+// In the action we can change the context value.
+
+// TIP: // we use simple events when send the events without a payload similar to below
+// send({ type: "moveToJourneyTable" })
+
+// TIP: // we use Parallel states when we want to show multiple states at the same time
+// For example in two different columns, or in two different accordions or tabs.
+/*
+        1. we right click on the initial state box.
+        2. we choose the "Parallel" option in State type.
+        3. we add the states that we want to show at the same time.
+        */
+
+// IMPORTANT:  useful snippets
+
+/*
+
+
+                        moveToJourneyForm: {
+                            target: "journeyForm",
+                        },
+
+                        toggleJourney: {  
+                            target: "journeyList",
+                            actions: {
+                                type: "toggleExpandedJourney",
+                            },
+                        },
+    types: {
+        context: {} as {
+            feedback: string;
+            activeTab: string;
+            activeCustomerSection: string;
+            expandedJourneyId: number | null;
+        },
+        events: {} as
+            | { type: "moveToCustomerInfo" }
+            | { type: "moveToCustomerForm" }
+            | { type: "moveToJourneyList" }
+            | { type: "moveToJourneyTable" }
+            | { type: "moveToJourneyForm" }
+            | { type: "toggleJourney"; journeyId: number },
+    },
+
+ 
+    actions: {
+        toggleExpandedJourney: assign({
+            expandedJourneyId: ({ event, context }: any) => {
+                if (context.expandedJourneyId === event.journeyId) {
+                    return null;
+                } else {
+                    return event.journeyId;
+                }
+            },
+        }),
+    },
+
+
+*/
