@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .drop-zone {
+            border: 2px dashed #007bff;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .drop-zone:hover {
+            background-color: #e9f5ff;
+        }
+        .drop-zone.dragover {
+            background-color: #d0ebff;
+        }
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .file-list li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Drag and Drop File Upload</h1>
+
+        <!-- Single File Upload -->
+        <div class="drop-zone" id="single-drop-zone">
+            Drag and drop a file here (Single File)
+        </div>
+        <ul class="file-list" id="single-file-list"></ul>
+
+        <!-- Multiple File Upload -->
+        <div class="drop-zone" id="multiple-drop-zone">
+            Drag and drop files here (Multiple Files)
+        </div>
+        <ul class="file-list" id="multiple-file-list"></ul>
+    </div>
+
+    <script>
+        function setupDropZone(dropZoneId, fileListId, allowMultiple) {
+            const dropZone = document.getElementById(dropZoneId);
+            const fileList = document.getElementById(fileListId);
+
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            });
+
+            dropZone.addEventListener('dragleave', () => {
+                dropZone.classList.remove('dragover');
+            });
+
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+                const files = allowMultiple ? e.dataTransfer.files : [e.dataTransfer.files[0]];
+                renderFiles(files, fileList);
+            });
+        }
+
+        function renderFiles(files, fileList) {
+            fileList.innerHTML = '';
+            Array.from(files).forEach(file => {
+                const li = document.createElement('li');
+                li.textContent = file.name;
+                fileList.appendChild(li);
+            });
+        }
+
+        setupDropZone('single-drop-zone', 'single-file-list', false);
+        setupDropZone('multiple-drop-zone', 'multiple-file-list', true);
+    </script>
+</body>
+</html>
