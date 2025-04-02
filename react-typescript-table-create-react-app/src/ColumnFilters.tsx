@@ -24,7 +24,7 @@ declare module "@tanstack/react-table" {
 export default function ColumnFilters() {
   const rerender = React.useReducer(() => ({}), {})[1];
 
-  // columnFilters is the state of the filters applied to the columns
+  // NOTE:  columnFilters is the state of the filters applied to the columns
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
