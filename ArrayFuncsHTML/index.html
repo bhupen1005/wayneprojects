@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lodash Interactive Examples</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f0f0f0;
+        padding: 20px;
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      button {
+        margin: 5px;
+        padding: 8px 12px;
+        border: none;
+        background-color: #007acc;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #005fa3;
+      }
+      .output-section {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 20px;
+        white-space: pre-wrap;
+      }
+      .label {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lodash Examples (Interactive)</h1>
+    <div id="buttons"></div>
+
+    <div class="output-section" id="result" style="display: flex;">
+      <div>
+        <div class="label">Original Users:</div>
+        <div id="original"></div>
+      </div>
+      <div>
+        <div class="label">Result:</div>
+        <div id="output"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

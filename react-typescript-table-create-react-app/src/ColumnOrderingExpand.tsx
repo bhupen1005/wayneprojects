@@ -6,13 +6,28 @@ import {
   ColumnOrderState,
   flexRender,
   getCoreRowModel,
+  getExpandedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { makeData, Person } from "./makeData";
+import { makeDataWithSubRows } from "./makeDataWithSubRows";
+import { Person } from "./makeDataWithSubRows";
 
 const defaultColumns: ColumnDef<Person>[] = [
   {
-    header: "Name", // Header for the columns first name and last name
+    id: "expander", // Add an expander column
+    header: () => null,
+    cell: ({ row }) =>
+      row.getCanExpand() ? (
+        <button
+          onClick={row.getToggleExpandedHandler()}
+          style={{ cursor: "pointer" }}
+        >
+          {row.getIsExpanded() ? "▼" : "▶"}
+        </button>
+      ) : null,
+  },
+  {
+    header: "Name",
     footer: (props) => props.column.id,
     columns: [
       {
@@ -30,7 +45,7 @@ const defaultColumns: ColumnDef<Person>[] = [
     ],
   },
   {
-    header: "Info", // Header with column and child header
+    header: "Info",
     footer: (props) => props.column.id,
     columns: [
       {
@@ -60,16 +75,30 @@ const defaultColumns: ColumnDef<Person>[] = [
       },
     ],
   },
+  {
+    header: "Details",
+    footer: (props) => props.column.id,
+    columns: [
+      {
+        accessorKey: "subRowInfo",
+        header: "SubRow Info",
+        cell: (info) =>
+          info.row.original.subRows ? "Has SubRows" : "No SubRows",
+        footer: (props) => props.column.id,
+      },
+    ],
+  },
 ];
 
-export default function ColumnOrdering() {
-  const [data, setData] = React.useState(() => makeData(20));
+export default function ColumnOrderingExpand() {
+  const [data, setData] = React.useState(() => makeDataWithSubRows());
+  console.log("data", data);
   const [columns] = React.useState(() => [...defaultColumns]);
 
   const [columnVisibility, setColumnVisibility] = React.useState({});
   const [columnOrder, setColumnOrder] = React.useState<ColumnOrderState>([]);
 
-  const rerender = () => setData(() => makeData(20));
+  const rerender = () => setData(() => makeDataWithSubRows());
 
   const table = useReactTable({
     data,
@@ -80,7 +109,10 @@ export default function ColumnOrdering() {
     },
     onColumnVisibilityChange: setColumnVisibility,
     onColumnOrderChange: setColumnOrder,
+    // getSubRows: (row) => row.subRows,
     getCoreRowModel: getCoreRowModel(),
+    getRowCanExpand: (row) => true,
+    getExpandedRowModel: getExpandedRowModel(), // Enable expanded row model
     debugTable: true,
     debugHeaders: true,
     debugColumns: true,
@@ -108,7 +140,6 @@ export default function ColumnOrdering() {
           </label>
         </div>
         {table.getAllLeafColumns().map((column) => {
-          // NOTE:  Hide or Show columns based on the checkbox
           return (
             <div key={column.id} className="px-1">
               <label>
@@ -154,13 +185,20 @@ export default function ColumnOrdering() {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
-            </tr>
+            <React.Fragment key={row.id}>
+              <tr>
+                {row.getVisibleCells().map((cell) => (
+                  <td key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                ))}
+              </tr>
+              {row.getIsExpanded() && (
+                <tr>
+                  <td></td>
+                </tr>
+              )}
+            </React.Fragment>
           ))}
         </tbody>
         <tfoot>

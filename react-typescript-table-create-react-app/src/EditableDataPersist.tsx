@@ -195,13 +195,18 @@ export default function EditableData() {
     []
   );
 
-  const [data, setData] = React.useState(() => makeData(1000));
-  const refreshData = () => setData(() => makeData(1000));
-
+  // Maintain two states: originalData and editedData
+  const [originalData, setOriginalData] = React.useState(() => makeData(1000));
+  const [editedData, setEditedData] = React.useState(originalData);
+  const refreshData = () => {
+    const newData = makeData(1000);
+    setOriginalData(newData);
+    setEditedData(newData);
+  };
   const [autoResetPageIndex, skipAutoResetPageIndex] = useSkipper();
 
   const table = useReactTable({
-    data,
+    data: editedData,
     columns,
     defaultColumn,
     getCoreRowModel: getCoreRowModel(),
@@ -213,7 +218,7 @@ export default function EditableData() {
       updateData: (rowIndex, columnId, value) => {
         // Skip page index reset until after next rerender
         skipAutoResetPageIndex();
-        setData((old) =>
+        setEditedData((old) =>
           old.map((row, index) => {
             if (index === rowIndex) {
               return {
@@ -228,6 +233,16 @@ export default function EditableData() {
     },
     debugTable: true,
   });
+
+  const handleSave = () => {
+    setOriginalData(editedData); // Save changes by copying editedData to originalData
+    alert("Changes saved!");
+  };
+
+  const handleCancel = () => {
+    setEditedData(originalData); // Revert changes by resetting editedData to originalData
+    alert("Changes reverted!");
+  };
 
   return (
     <div className="p-2">
@@ -348,7 +363,22 @@ export default function EditableData() {
       <div>
         <button onClick={() => refreshData()}>Refresh Data</button>
       </div>
-      <div>{JSON.stringify(data.slice(0, 5), null, 2)}</div>
+      <div className="flex gap-2 mt-4">
+        <button
+          onClick={handleSave}
+          className="border rounded p-2 bg-green-500 text-white"
+        >
+          Save
+        </button>
+        <button
+          onClick={handleCancel}
+          className="border rounded p-2 bg-red-500 text-white"
+        >
+          Cancel
+        </button>
+      </div>
+      <div>{JSON.stringify(editedData.slice(0, 1), null, 2)}</div>
+      <div>{JSON.stringify(originalData.slice(0, 1), null, 2)}</div>
     </div>
   );
 }

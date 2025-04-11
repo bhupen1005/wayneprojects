@@ -7,7 +7,12 @@ import MyTable4 from "./HeaderGroup";
 import ColumnFilters from "./ColumnFilters";
 import ColumnFiltersFaceted from "./ColumnFiltersFaceted";
 import ColumnOrdering from "./ColumnOrdering";
+import ColumnOrderingExpand from "./ColumnOrderingExpand";
 import EditableData from "./EditableData";
+import EditableDataPersist from "./EditableDataPersist";
+import RowSelection from "./RowSelection";
+import ExpandableEditableTable from "./ZBigZ";
+import ZBigTable from "./ZBigTable";
 // import ColumnFiltersDrag from "./ColumnFiltersDrag";
 
 function App() {
@@ -26,10 +31,21 @@ function App() {
       <hr />
       <EditableData />
       <hr />
+      <hr />
+      <h2>Not saved until saved..</h2>
+      <EditableDataPersist />
+      <hr />
       {
         // functionality of below component is pending.
       }
       {/* <ColumnFiltersDrag /> */}
+
+      <RowSelection />
+      <hr />
+      <ColumnOrderingExpand />
+      <hr />
+      {/* <ExpandableEditableTable /> */}
+      <ZBigTable />
     </div>
   );
 }

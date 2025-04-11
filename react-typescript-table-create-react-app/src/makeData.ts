@@ -9,7 +9,7 @@ export type Person = {
   visits: number;
   progress: number;
   status: "relationship" | "complicated" | "single";
-  subRows?: Person[]; // optional for nested data
+  subRows?: any[]; // optional for nested data
 };
 
 const range = (len: number) => {

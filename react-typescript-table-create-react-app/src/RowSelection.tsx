@@ -1,154 +1,70 @@
-import React, { useEffect, useState } from "react";
+import React, { HTMLAttributes, HTMLProps } from "react";
 
-//
+import { makeData, Person } from "./makeData";
+
 import {
   Column,
-  Table,
   ColumnDef,
-  useReactTable,
+  flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
-  flexRender,
-  RowData,
+  Table,
+  useReactTable,
 } from "@tanstack/react-table";
-import { makeData, Person } from "./makeData";
 
-declare module "@tanstack/react-table" {
-  interface TableMeta<TData extends RowData> {
-    updateData: (rowIndex: number, columnId: string, value: unknown) => void;
-  }
-}
-
-function EditableCell({
-  getValue,
-  row: { index },
-  column: { id, columnDef }, // Use columnDef to check if the column is editable
-  table,
-}: any) {
-  const initialValue = getValue();
-  const [value, setValue] = useState(initialValue);
-  const [isEditing, setIsEditing] = useState(false); // Track edit mode
-  const [error, setError] = useState<string | null>(null);
-
-  const onBlur = () => {
-    if (columnDef.validate) {
-      const validationResult = columnDef.validate(value); // access validation function from columnDef
-      if (validationResult !== true) {
-        setError(validationResult as string); // Set error message
-        return; // Do not update the value if validation fails
-      }
-    }
-
-    setError(null); // Clear any previous errors
-    table.options.meta?.updateData(index, id, value);
-    setIsEditing(false); // Exit edit mode on blur
-  };
-
-  useEffect(() => {
-    setValue(initialValue);
-  }, [initialValue]);
-
-  // Check if the column is editable
-  const isEditable = columnDef.editable !== false;
-
-  return isEditable ? (
-    isEditing ? (
-      <input
-        value={value as string}
-        onChange={(e) => setValue(e.target.value)}
-        onBlur={onBlur}
-        autoFocus // Automatically focus the input when entering edit mode
-        style={{
-          border: error ? "1px solid red" : "1px solid #ccc", // Red border if error exists
-          borderRadius: "4px",
-          padding: "4px",
-        }}
-      />
-    ) : (
-      <div
-        onClick={() => setIsEditing(true)} // Enter edit mode on click
-        style={{ cursor: "pointer" }}
-      >
-        {value as string}
-      </div>
-    )
-  ) : (
-    <div>{value as string}</div> // Render as plain text if not editable
-  );
-}
-
-// Give our default column cell renderer editing superpowers!
-const defaultColumn: Partial<ColumnDef<Person>> = {
-  cell: (props) => (
-    <EditableCell
-      getValue={props.getValue}
-      row={props.row}
-      column={props.column}
-      table={props.table}
-    />
-  ),
-  //   cell: ({ getValue, row: { index }, column: { id }, table }) => {
-  //     const initialValue = getValue();
-  //     // We need to keep and update the state of the cell normally
-  //     const [value, setValue] = useState(initialValue);
-
-  //     // When the input is blurred, we'll call our table meta's updateData function
-  //     const onBlur = () => {
-  //       table.options.meta?.updateData(index, id, value);
-  //     };
-
-  //     // If the initialValue is changed external, sync it up with our state
-  //     useEffect(() => {
-  //       setValue(initialValue);
-  //     }, [initialValue]);
-
-  //     return (
-  //       <input
-  //         value={value as string}
-  //         onChange={(e) => setValue(e.target.value)}
-  //         onBlur={onBlur}
-  //       />
-  //     );
-  //   },
-};
-
-function useSkipper() {
-  const shouldSkipRef = React.useRef(true);
-  const shouldSkip = shouldSkipRef.current;
-
-  // Wrap a function with this to skip a pagination reset temporarily
-  const skip = React.useCallback(() => {
-    shouldSkipRef.current = false;
-  }, []);
-
-  React.useEffect(() => {
-    shouldSkipRef.current = true;
-  });
-
-  return [shouldSkip, skip] as const;
-}
-
-export default function EditableData() {
+function RowSelection() {
   const rerender = React.useReducer(() => ({}), {})[1];
+
+  const [rowSelection, setRowSelection] = React.useState({});
+  const [globalFilter, setGlobalFilter] = React.useState("");
 
   const columns = React.useMemo<ColumnDef<Person>[]>(
     () => [
+      {
+        id: "select",
+        header: ({ table }) => (
+          <>
+            <IndeterminateCheckbox
+              {...{
+                checked: table.getIsAllRowsSelected(),
+                indeterminate: table.getIsSomeRowsSelected(),
+                onChange: table.getToggleAllRowsSelectedHandler(),
+              }}
+            />
+          </>
+        ),
+        cell: ({ row }) => (
+          <div className="px-1">
+            <button>@c</button>
+            <button>@e</button>
+            <button>@d</button>
+            <IndeterminateCheckbox
+              {...{
+                checked: row.getIsSelected(),
+                disabled: !row.getCanSelect(),
+                indeterminate: row.getIsSomeSelected(),
+                onChange: row.getToggleSelectedHandler(),
+              }}
+            />
+          </div>
+        ),
+      },
       {
         header: "Name",
         footer: (props) => props.column.id,
         columns: [
           {
             accessorKey: "firstName",
+            cell: (info) => info.getValue(),
             footer: (props) => props.column.id,
-            editable: true,
           },
           {
             accessorFn: (row) => row.lastName,
             id: "lastName",
+            cell: (info) => info.getValue(),
             header: () => <span>Last Name</span>,
             footer: (props) => props.column.id,
-            editable: true,
           },
         ],
       },
@@ -160,14 +76,6 @@ export default function EditableData() {
             accessorKey: "age",
             header: () => "Age",
             footer: (props) => props.column.id,
-            editable: true, //Disable Editing on few columns
-            validate: (value: any) => {
-              // validation function for age column
-              if (isNaN(value) || value <= 0) {
-                return "Age must be a positive number.";
-              }
-              return true; // Validation passed
-            },
           },
           {
             header: "More Info",
@@ -195,42 +103,34 @@ export default function EditableData() {
     []
   );
 
-  const [data, setData] = React.useState(() => makeData(1000));
-  const refreshData = () => setData(() => makeData(1000));
-
-  const [autoResetPageIndex, skipAutoResetPageIndex] = useSkipper();
+  const [data, setData] = React.useState(() => makeData(100000));
+  const refreshData = () => setData(() => makeData(100000));
 
   const table = useReactTable({
     data,
     columns,
-    defaultColumn,
+    state: {
+      rowSelection,
+    },
+    enableRowSelection: true, //enable row selection for all rows
+    // enableRowSelection: row => row.original.age > 18, // or enable row selection conditionally per row
+    onRowSelectionChange: setRowSelection,
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
-    autoResetPageIndex,
-    // Provide our updateData function to our table meta
-    meta: {
-      updateData: (rowIndex, columnId, value) => {
-        // Skip page index reset until after next rerender
-        skipAutoResetPageIndex();
-        setData((old) =>
-          old.map((row, index) => {
-            if (index === rowIndex) {
-              return {
-                ...old[rowIndex]!,
-                [columnId]: value,
-              };
-            }
-            return row;
-          })
-        );
-      },
-    },
     debugTable: true,
   });
 
   return (
     <div className="p-2">
+      <div>
+        <input
+          value={globalFilter ?? ""}
+          onChange={(e) => setGlobalFilter(e.target.value)}
+          className="p-2 font-lg shadow border border-block"
+          placeholder="Search all columns..."
+        />
+      </div>
       <div className="h-2" />
       <table>
         <thead>
@@ -240,7 +140,7 @@ export default function EditableData() {
                 return (
                   <th key={header.id} colSpan={header.colSpan}>
                     {header.isPlaceholder ? null : (
-                      <div>
+                      <>
                         {flexRender(
                           header.column.columnDef.header,
                           header.getContext()
@@ -250,7 +150,7 @@ export default function EditableData() {
                             <Filter column={header.column} table={table} />
                           </div>
                         ) : null}
-                      </div>
+                      </>
                     )}
                   </th>
                 );
@@ -276,6 +176,20 @@ export default function EditableData() {
             );
           })}
         </tbody>
+        <tfoot>
+          <tr>
+            <td className="p-1">
+              <IndeterminateCheckbox
+                {...{
+                  checked: table.getIsAllPageRowsSelected(),
+                  indeterminate: table.getIsSomePageRowsSelected(),
+                  onChange: table.getToggleAllPageRowsSelectedHandler(),
+                }}
+              />
+            </td>
+            <td colSpan={20}>Page Rows ({table.getRowModel().rows.length})</td>
+          </tr>
+        </tfoot>
       </table>
       <div className="h-2" />
       <div className="flex items-center gap-2">
@@ -341,17 +255,47 @@ export default function EditableData() {
           ))}
         </select>
       </div>
-      <div>{table.getRowModel().rows.length} Rows</div>
+      <br />
       <div>
-        <button onClick={() => rerender()}>Force Rerender</button>
+        {Object.keys(rowSelection).length} of{" "}
+        {table.getPreFilteredRowModel().rows.length} Total Rows Selected
+      </div>
+      <hr />
+      <br />
+      <div>
+        <button className="border rounded p-2 mb-2" onClick={() => rerender()}>
+          Force Rerender
+        </button>
       </div>
       <div>
-        <button onClick={() => refreshData()}>Refresh Data</button>
+        <button
+          className="border rounded p-2 mb-2"
+          onClick={() => refreshData()}
+        >
+          Refresh Data
+        </button>
       </div>
-      <div>{JSON.stringify(data.slice(0, 5), null, 2)}</div>
+      <div>
+        <button
+          className="border rounded p-2 mb-2"
+          onClick={() =>
+            console.info(
+              "table.getSelectedRowModel().flatRows",
+              table.getSelectedRowModel().flatRows
+            )
+          }
+        >
+          Log table.getSelectedRowModel().flatRows
+        </button>
+      </div>
+      <div>
+        <label>Row Selection State:</label>
+        <pre>{JSON.stringify(table.getState().rowSelection, null, 2)}</pre>
+      </div>
     </div>
   );
 }
+
 function Filter({
   column,
   table,
@@ -363,30 +307,22 @@ function Filter({
     .getPreFilteredRowModel()
     .flatRows[0]?.getValue(column.id);
 
-  const columnFilterValue = column.getFilterValue();
-
   return typeof firstValue === "number" ? (
     <div className="flex space-x-2">
       <input
         type="number"
-        value={(columnFilterValue as [number, number])?.[0] ?? ""}
+        value={((column.getFilterValue() as any)?.[0] ?? "") as string}
         onChange={(e) =>
-          column.setFilterValue((old: [number, number]) => [
-            e.target.value,
-            old?.[1],
-          ])
+          column.setFilterValue((old: any) => [e.target.value, old?.[1]])
         }
         placeholder={`Min`}
         className="w-24 border shadow rounded"
       />
       <input
         type="number"
-        value={(columnFilterValue as [number, number])?.[1] ?? ""}
+        value={((column.getFilterValue() as any)?.[1] ?? "") as string}
         onChange={(e) =>
-          column.setFilterValue((old: [number, number]) => [
-            old?.[0],
-            e.target.value,
-          ])
+          column.setFilterValue((old: any) => [old?.[0], e.target.value])
         }
         placeholder={`Max`}
         className="w-24 border shadow rounded"
@@ -395,10 +331,35 @@ function Filter({
   ) : (
     <input
       type="text"
-      value={(columnFilterValue ?? "") as string}
+      value={(column.getFilterValue() ?? "") as string}
       onChange={(e) => column.setFilterValue(e.target.value)}
       placeholder={`Search...`}
       className="w-36 border shadow rounded"
     />
   );
 }
+
+function IndeterminateCheckbox({
+  indeterminate,
+  className = "",
+  ...rest
+}: { indeterminate?: boolean } & HTMLProps<HTMLInputElement>) {
+  const ref = React.useRef<HTMLInputElement>(null!);
+
+  React.useEffect(() => {
+    if (typeof indeterminate === "boolean") {
+      ref.current.indeterminate = !rest.checked && indeterminate;
+    }
+  }, [ref, indeterminate]);
+
+  return (
+    <input
+      type="checkbox"
+      ref={ref}
+      className={className + " cursor-pointer"}
+      {...rest}
+    />
+  );
+}
+
+export default RowSelection;
