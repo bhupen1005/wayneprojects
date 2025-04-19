@@ -32,8 +32,6 @@ function EditableCell({
   column: { id, columnDef }, // Use columnDef to check if the column is editable
   table,
 }: any) {
-  console.log("zbigzvalue", getValue());
-
   const initialValue = getValue();
   const [value, setValue] = useState(initialValue);
   const [isEditing, setIsEditing] = useState(false); // Track edit mode
@@ -88,8 +86,6 @@ function EditableCell({
 
 const defaultColumn: Partial<ColumnDef<Person>> = {
   cell: (props) => {
-    console.log("zbigzprops", props);
-
     return (
       <EditableCell
         getValue={props.getValue}

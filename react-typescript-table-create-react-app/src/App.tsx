@@ -13,6 +13,7 @@ import EditableDataPersist from "./EditableDataPersist";
 import RowSelection from "./RowSelection";
 import ExpandableEditableTable from "./ZBigZ";
 import ZBigTable from "./ZBigTable";
+import { ColumnFiltersFacetedReusableWrapper } from "./ColumnFiltersFacetedReusable";
 // import ColumnFiltersDrag from "./ColumnFiltersDrag";
 
 function App() {
@@ -25,7 +26,12 @@ function App() {
       <hr />
       <ColumnFilters />
       <hr />
+      <h3>ColumnFiltersFaceted</h3>
       <ColumnFiltersFaceted />
+      <hr />
+      <hr />
+      <h3>ColumnFiltersFacetedReusableWrapper</h3>
+      <ColumnFiltersFacetedReusableWrapper />
       <hr />
       <ColumnOrdering />
       <hr />

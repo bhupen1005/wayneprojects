@@ -92,8 +92,8 @@ export default function ColumnFilters() {
     []
   );
 
-  const [data, setData] = React.useState<Person[]>(() => makeData(5_000));
-  const refreshData = () => setData((_old) => makeData(50_000)); //stress test
+  const [data, setData] = React.useState<Person[]>(() => makeData(50));
+  const refreshData = () => setData((_old) => makeData(50)); //stress test
 
   const table = useReactTable({
     data, // NOTE: data is the data to be displayed in the table
