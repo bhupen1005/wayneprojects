@@ -659,7 +659,9 @@ javascript: (() => {
 
 // Action Rule - Second Tab
 javascript: (() => {
-  const modal = document.querySelector("#ARG-tabpanel-1");
+  const modal =
+    document.querySelector("#ARG-tabpanel-1") ||
+    document.querySelector("#profile-tabpanel-2");
   if (!modal) return alert("Modal not found");
 
   // 1) Select your tag input—replace this with the actual selector
@@ -667,7 +669,26 @@ javascript: (() => {
   if (!tagInput) return alert("Tag input not found");
 
   // 2) The values you want to enter
-  const values = ["10", "20", "30"];
+  const values = [
+    "10",
+    "20",
+    "30",
+    "40",
+    "50",
+    "60",
+    "70",
+    "80",
+    "90",
+    "100",
+    "110",
+    "120",
+    "130",
+    "140",
+    "150",
+    "160",
+    "170",
+    "180",
+  ];
 
   values.forEach((val) => {
     // focus & type the value
