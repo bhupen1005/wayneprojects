@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom"; // Import jest-dom for extended matchers
 import Button from "../components/Button";
-
-test("renders button with label", () => {
+import { act } from "react";
+test("renders button with label", async () => {
   render(<Button label="Click Me" />);
-  expect(screen.getByText(/Click Me/i)).toBeInTheDocument();
+  expect(await screen.getByText(/Click Me/i)).toBeInTheDocument();
 });

@@ -1148,3 +1148,513 @@ const InputComponentWithCompoundPattern = {
     }),
   },
 };
+
+const d3Chart = {
+  props: {
+    width,
+    height,
+    marginTop,
+    marginRight,
+    marginBottom,
+    marginLeft,
+  },
+  x: {
+    d3: {
+      scaleUtc: () => {},
+      domain: () => {},
+      range: () => {},
+    },
+  },
+  y: {
+    d3: {
+      scaleLinear: () => {},
+      domain: () => {},
+      range: () => {},
+    },
+  },
+  svg: {
+    d3: {
+      create: () => {},
+      attr: () => {},
+    },
+    append: () => {},
+    attr: () => {},
+    call: () => {},
+    node: () => {},
+  },
+};
+
+const D3BarChart = {
+  props: {
+    data,
+    width,
+    height,
+    marginTop,
+    marginRight,
+    marginBottom,
+    marginLeft,
+  },
+  x: {
+    d3: {
+      scaleBand: () => {},
+      domain: () => {},
+      range: () => {},
+      padding: () => {},
+    },
+  },
+  y: {
+    d3: {
+      scaleLinear: () => {},
+      domain: () => {},
+      range: () => {},
+    },
+  },
+  svg: {
+    d3: {
+      create: () => {},
+      attr: () => {},
+    },
+    append: () => {},
+    attr: () => {},
+    call: () => {},
+    node: () => {},
+  },
+};
+
+const CSS = {
+  block: {
+    background,
+    border,
+    margin: {
+      props: {
+        auto: "it will center the element",
+        inherit: "it will inherit the margin from the parent element",
+      },
+      "Margin Collapsing":
+        "Top and bottom margins of block-level elements can collapse into a single margin.",
+    },
+    padding: {
+      padding,
+      "Fixed Width with Padding and Border": {
+        "box-sizing": "border-box", // it will include the padding and border in the width of the element
+      },
+    },
+  },
+  width: {
+    div: {
+      width: "100%", // TIP: No need to mention if max-width is used
+      maxWidth: "1200px", // it will take the maximum width of 1200px
+      minWidth: "600px", // it will take the minimum width of 600px
+    },
+    input: {
+      width: "100%", // INFO:  Need to mention in case of input element
+      maxWidth: "400px", // it will take the maximum width of 400px
+      minWidth: "200px", // it will take the minimum width of 200px
+    },
+    example: () => {
+      const css = `
+              * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+
+              body{
+                padding:10px;
+              }
+              .container {
+                width: 100%;
+              }
+
+              .formField {
+                border: 1px solid grey;
+                padding: 20px;
+                min-width: 200px;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-sizing: border-box;
+              }
+
+              .formField input {
+                display: block;
+                width: 100%;
+                max-width: 200px;
+                min-width: 50px;
+                box-sizing: border-box;
+              }
+
+              .formField select {
+                display: block;
+                width: 100%;
+                max-width: 200px;
+                min-width: 50px;
+                box-sizing: border-box;
+              }
+
+              .formField textarea {
+                display: block;
+                width: 100%;
+                max-width: 200px;
+                min-width: 50px;
+                box-sizing: border-box;
+              }
+
+              .urdu {
+                align-items: flex-end;
+              }`;
+
+      return (
+        <div class="container">
+          <div class="formField">
+            <label for="name">Name:</label>
+            <input name="name" type="text" />
+            <select name="gender" id="">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <input type="range" min="0" max="500" step="100" />
+          </div>
+          <div class="formField urdu">
+            <label for="name">ٹائپ کریں</label>
+            <input name="name" type="text" />
+          </div>
+        </div>
+      );
+    },
+  },
+  flexbox: {
+    container: {
+      props: {
+        display: "flex",
+        "flex-direction": {
+          row: {
+            "flex-wrap": "wrap", // wrap items to the next line if they don't fit in one line
+            "justify-content": "space-between", // space between items
+            "align-items": "center", // align items in the center of the container
+            "align-content": "center", // align the flex lines in the center of the container
+          },
+          rowReverse: {
+            "flex-wrap": "wrap-reverse", // wrap items to the next line in reverse order
+            "justify-content": "space-between", // space between items
+            "align-items": "center", // align items in the center of the container
+          },
+          column: {
+            "flex-wrap": "wrap-reverse", // wrap items to the next line in reverse order
+            "justify-content": "space-around", // space around items
+            "align-items": "flex-start", // align items at the start of the container
+          },
+          columnReverse: {
+            "flex-wrap": "wrap-reverse", // wrap items to the next line in reverse order
+            "justify-content": "space-around", // space around items
+            "align-items": "flex-start", // align items at the start of the container
+          },
+        },
+      },
+    },
+    items: {
+      "flex-grow": {},
+      "flex-shrink": {},
+      "flex-basis": {}, // initial size of the item before flex-grow and flex-shrink are applied
+      flex: {}, // shorthand for flex-grow, flex-shrink and flex-basis
+      "align-self": {}, // override the align-items property for a specific item
+      order: {}, // order of the item in the flex container
+    },
+  },
+};
+
+const ContextAPI = {
+  Context: {
+    createContext: () => {},
+  },
+  ContextProvider: {
+    initialState,
+    apiCall,
+    functionDefinitions,
+    values: {
+      state,
+      loginFunction,
+      logoutFunction,
+    },
+    ProvidorComponent: {
+      props: {
+        value,
+      },
+    },
+    exported: true,
+  },
+};
+
+const DataStructures = {
+  tree: {
+    A: {
+      B: {
+        C: {
+          D: {
+            E: {},
+          },
+          D: {},
+        },
+        C: {},
+        CC: {},
+      },
+      B: {},
+      BB: {},
+    },
+  },
+  binaryTree: {
+    value: 10,
+    left: {
+      value: 5,
+      left: null,
+      right: null,
+    },
+    right: {
+      value: 15,
+      left: null,
+      right: {
+        value: 20,
+        left: null,
+        right: null,
+      },
+    },
+  },
+  graph: {
+    A: ["B", "C"],
+    B: ["A", "D"],
+    C: ["A", "D"],
+    D: ["B", "C"],
+  },
+  directedGraph: {
+    A: [
+      { to: "B", weight: 2 },
+      { to: "C", weight: 4 },
+    ],
+    B: [{ to: "D", weight: 1 }],
+    C: [{ to: "D", weight: 5 }],
+    D: [],
+  },
+};
+
+const JestTest = {
+  it: {
+    "should render the component": () => {
+      const { getByText } = render(<MyComponent />);
+      expect(getByText("Hello World")).toBeInTheDocument();
+    },
+  },
+};
+
+const FileStructure = {
+  LibraryImports,
+  ObjectImportsFromFiles,
+  FunctionImportsFromFiles,
+  ComponentImportsFromFiles,
+  interfaces,
+  types,
+  objects,
+  functions,
+  destructuring,
+  typeExports,
+  defaultExports,
+  namedExports,
+};
+
+const apis = {
+  getUsers: () => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((users) => {
+        console.log(users); // Array of user objects
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  },
+  getUserById: () => {
+    const userId = 1;
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((user) => {
+        console.log(user); // User object
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  },
+  createUser: () => {
+    const newUser = {
+      name: "John Doe",
+      email: "johnkon@gmail.com",
+      phone: "123-456-7890",
+      address: {
+        street: "123 Main St",
+        city: "Anytown",
+        state: "CA",
+        zip: "12345",
+      },
+    };
+    fetch("https://jsonplaceholder.typicode.com/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((user) => {
+        console.log("user is created", user); // Created user object
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  },
+  updateUser: () => {
+    const userId = 1;
+    const updatedUser = {
+      name: "Jane Doe",
+      email: "somemail@gmail.com",
+      phone: "987-654-3210",
+    };
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedUser),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((user) => {
+        console.log("user is updated", user);
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  },
+  deleteUser: () => {
+    const userId = 1;
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        console.log("user is deleted");
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  },
+};
+
+const ReduxProject = {
+  store: () => {
+    import { apiSlice } from "@/redux/baseApiSlice";
+    import { authSlice } from "@/redux/dataSlices/authSlice";
+    import { combineReducers, configureStore } from "@reduxjs/toolkit";
+
+    import {
+      rtkQueryAPIGetJourneyPlannerInterceptor,
+      rtkQueryAPIResponseLogger,
+      rtkQueryErrorLogger,
+    } from "@/utils/middleware";
+    import {
+      FLUSH,
+      PAUSE,
+      PERSIST,
+      PURGE,
+      REGISTER,
+      REHYDRATE,
+      persistReducer,
+      persistStore,
+    } from "redux-persist";
+    import storage from "redux-persist/lib/storage";
+    import { selectiveQueryTransform } from "./selectiveQueryTransform";
+
+    // https://www.npmjs.com/package/redux-persist
+    const rootPersistConfig = {
+      key: "root",
+      storage,
+      transforms: [selectiveQueryTransform],
+    };
+
+    const authPersistConfig = {
+      key: "auth",
+      storage,
+      // blackList: ["nonceValue"],
+    };
+    // const apiPersistConfig = {
+    //   key: "api",
+    //   storage: storage,
+    // };
+    const combinedReducer = combineReducers({
+      auth: persistReducer(authPersistConfig, authSlice.reducer),
+      // [apiSlice.reducerPath]: persistReducer(apiPersistConfig, apiSlice.reducer),
+      [apiSlice.reducerPath]: apiSlice.reducer,
+    });
+
+    const rootReducer = (state, action) => combinedReducer(state, action);
+
+    const persistedReducer = persistReducer(rootPersistConfig, rootReducer);
+
+    export const store = configureStore({
+      reducer: persistedReducer,
+      // reducer: rootReducer,
+      middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+          // https://stackoverflow.com/questions/65217815/redux-handling-really-large-state-object
+          // https://stackoverflow.com/questions/70852386/a-non-serializable-value-was-detected-in-an-action-in-the-path-register-val/70852510#70852510
+          serializableCheck: {
+            // error: A component suspended while responding to synchronous input.( not fixed by ignoreActions) fix: remove lazy load of component
+            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+          },
+          // serializableCheck: false,
+        }).concat(
+          apiSlice.middleware,
+          rtkQueryErrorLogger,
+
+          rtkQueryAPIResponseLogger,
+          rtkQueryAPIGetJourneyPlannerInterceptor
+        ),
+      devTools: true,
+    });
+    // use of redux-persist to persist the state
+    // wrapped the store with persistStore and exported it to be used in App.tsx
+    export const persistor = persistStore(store);
+  },
+};
+
+const applicationRoute = {
+  referenceURL: "https://reactrouter.com/start/framework/routing",
+  homepage: index("./home.tsx"),
+  about: route("about", "./about.tsx"),
+  contact: route("contact", "./contact.tsx"),
+  loginAndRegister: layout("./auth/layout.tsx", [
+    route("login", "./auth/login.tsx"),
+    route("register", "./auth/register.tsx"),
+  ]),
+};
+
