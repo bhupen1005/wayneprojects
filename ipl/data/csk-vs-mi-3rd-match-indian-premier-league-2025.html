@@ -1,0 +1,2774 @@
+<div class="page">
+  <div id="fb-root"></div>
+  <div id="page-wrapper" class="container" style="display: inline-block">
+    <div
+      id="shosh"
+      class="ad-unit shosh-embed"
+      style="height: 0; width: 980px; text-align: center"
+    ></div>
+    <span
+      id="skin_left"
+      class="ad-unit"
+      style="
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: calc(50% - 635px);
+        margin-right: 3px;
+        z-index: -99;
+      "
+    ></span>
+    <div
+      class="html-refresh"
+      url="/api/html/matches-menu"
+      timeout="300000"
+      disable-first-load="true"
+    >
+      <div class="cb-col cb-col-100 mrgn-btm-5">
+        <nav class="cb-mat-mnu" ng-init="direction='up'">
+          <a
+            class="cb-mat-mnu-itm cb-ovr-flo cb-mat-mnu-ttl"
+            target="_self"
+            title=""
+            href="/cricket-match/live-scores"
+            id="live-scores-link"
+            >MATCHES</a
+          ><a
+            class="cb-mat-mnu-itm cb-ovr-flo"
+            title="Zimbabwe v Bangladesh, 2nd Test - Live"
+            href="/live-cricket-scores/116254/zim-vs-ban-2nd-test-zimbabwe-tour-of-bangladesh-2025"
+            target="_self"
+            >ZIM vs BAN - Live</a
+          ><a
+            class="cb-mat-mnu-itm cb-ovr-flo"
+            title="Chennai Super Kings v Punjab Kings, 49th Match - Preview"
+            href="/live-cricket-scores/115282/csk-vs-pbks-49th-match-indian-premier-league-2025"
+            target="_self"
+            >CSK vs PBKS - Preview</a
+          ><a
+            class="cb-mat-mnu-itm cb-ovr-flo"
+            title="Kolkata Knight Riders v Delhi Capitals, 48th Match - KKR Won"
+            href="/live-cricket-scores/115275/kkr-vs-dc-48th-match-indian-premier-league-2025"
+            target="_self"
+            >KKR vs DC - KKR Won</a
+          ><a
+            class="cb-mat-mnu-itm cb-ovr-flo"
+            title="India Women v South Africa Women, 2nd Match - INDW Won"
+            href="/live-cricket-scores/116029/indw-vs-rsaw-2nd-match-sri-lanka-womens-tri-nation-series-2025"
+            target="_self"
+            >INDW vs RSAW - INDW Won</a
+          ><a
+            class="cb-mat-mnu-itm cb-ovr-flo"
+            title="Gujarat Titans v Rajasthan Royals, 47th Match - RR Won"
+            href="/live-cricket-scores/115266/gt-vs-rr-47th-match-indian-premier-league-2025"
+            target="_self"
+            >GT vs RR - RR Won</a
+          ><span
+            ng-click="(direction=='up')?direction = 'down' : direction = 'up'"
+            ><a
+              class="cb-mat-mnu-itm cb-mat-mnu-all"
+              ng-class="{true:'cb-mat-mnu-cls'}[direction=='down']"
+              id="match-dropdown"
+              ><span ng-bind="(direction=='up') ? 'ALL': 'CLOSE'"></span
+              ><span
+                ng-class="(direction=='up') ? 'cb-caret-down' : 'cb-caret-up'"
+              ></span></a
+          ></span>
+        </nav>
+        <div id="matchmenu">
+          <div class="cb-mm-wrp {{direction}}">
+            <div class="cb-scg-drp-dwn cb-col cb-col-100 cb-mnu-{{direction}}">
+              <nav class="nav cb-mm-nvtb" ng-init="option= 'all'">
+                <a
+                  class="cb-nav-pill-2 {{(option=='all')?'active':''}}"
+                  ng-click="option='all'"
+                  style="margin-right: 20px"
+                  >All</a
+                ><a
+                  class="cb-nav-pill-2 {{(option=='live')?'active':''}}"
+                  ng-click="option='live'"
+                  style="margin-right: 20px"
+                  >Live Now</a
+                ><a
+                  class="cb-nav-pill-2 {{(option=='today')?'active':''}}"
+                  ng-click="option='today'"
+                  style="margin-right: 20px"
+                  >Today</a
+                >
+              </nav>
+              <style>
+                .cb-nt-{{option}}{opacity:0.4!important;}
+              </style>
+              <ul class="cb-scg-drp-dwn-ul">
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mm-typ">INTERNATIONAL</div>
+                    <div class="cb-scg-srs-nm">
+                      Zimbabwe tour of Bangladesh, 2025
+                    </div>
+                    <div class="cb-mtch-all">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/116254/zim-vs-ban-2nd-test-zimbabwe-tour-of-bangladesh-2025"
+                        title="Zimbabwe v Bangladesh, 2nd Test - Live"
+                        ><span class="cb-mm-mtch-tm"
+                          >Zimbabwe vs Bangladesh</span
+                        ><span class="cb-mm-liv-tag">&nbsp;&nbsp;LIVE</span></a
+                      >
+                      <div class="cb-mm-mtch-nm">2nd Test</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-scg-srs-nm">
+                      Malaysia Quadrangular T20I Series, 2025
+                    </div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118079/mly-vs-thai-9th-match-malaysia-quadrangular-t20i-series-2025"
+                        title="Malaysia v Thailand, 9th Match - MLY Won"
+                        ><span class="cb-mm-mtch-tm">Malaysia vs Thailand</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">9th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118088/sin-vs-sau-10th-match-malaysia-quadrangular-t20i-series-2025"
+                        title="Singapore v Saudi Arabia, 10th Match - SAU Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Singapore vs Saudi Arabia</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">10th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118097/mly-vs-sau-11th-match-malaysia-quadrangular-t20i-series-2025"
+                        title="Malaysia v Saudi Arabia, 11th Match - SAU Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Malaysia vs Saudi Arabia</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">11th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118100/sin-vs-thai-12th-match-malaysia-quadrangular-t20i-series-2025"
+                        title="Singapore v Thailand, 12th Match - Abandon"
+                        ><span class="cb-mm-mtch-tm">Singapore vs Thailand</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">12th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118109/sin-vs-thai-3rd-place-play-off-malaysia-quadrangular-t20i-series-2025"
+                        title="Singapore v Thailand, 3rd place play-off - Upcoming"
+                        ><span class="cb-mm-mtch-tm">Singapore vs Thailand</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">3rd place play-off</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118118/sau-vs-mly-final-malaysia-quadrangular-t20i-series-2025"
+                        title="Saudi Arabia v Malaysia, Final - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Saudi Arabia vs Malaysia</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">Final</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mm-typ">T20 LEAGUE</div>
+                    <div class="cb-scg-srs-nm">IPL 2025</div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/115266/gt-vs-rr-47th-match-ipl-2025"
+                        title="Gujarat Titans v Rajasthan Royals, 47th Match - RR Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Gujarat Titans vs Rajasthan Royals</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">47th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/115275/kkr-vs-dc-48th-match-ipl-2025"
+                        title="Kolkata Knight Riders v Delhi Capitals, 48th Match - KKR Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Kolkata Knight Riders vs Delhi Capitals</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">48th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/115282/csk-vs-pbks-49th-match-ipl-2025"
+                        title="Chennai Super Kings v Punjab Kings, 49th Match - Preview"
+                        ><span class="cb-mm-mtch-tm"
+                          >Chennai Super Kings vs Punjab Kings</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">49th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/115291/rr-vs-mi-50th-match-ipl-2025"
+                        title="Rajasthan Royals v Mumbai Indians, 50th Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Rajasthan Royals vs Mumbai Indians</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">50th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mm-typ">DOMESTIC</div>
+                    <div class="cb-scg-srs-nm">
+                      Tri-Nation Series in UAE, 2025
+                    </div>
+                    <div class="cb-mtch-all">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118208/sla-vs-afga-only-test-tri-nation-series-in-uae-2025"
+                        title="Sri Lanka A v Afghanistan A, Only Test - Live"
+                        ><span class="cb-mm-mtch-tm"
+                          >Sri Lanka A vs Afghanistan A</span
+                        ><span class="cb-mm-liv-tag">&nbsp;&nbsp;LIVE</span></a
+                      >
+                      <div class="cb-mm-mtch-nm">Only Test</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-scg-srs-nm">County Division 2</div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/113382/derby-vs-mdx-14th-match-county-division-2"
+                        title="Derbyshire v Middlesex, 14th Match - Complete"
+                        ><span class="cb-mm-mtch-tm"
+                          >Derbyshire vs Middlesex</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">14th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/113379/gloucs-vs-leic-13th-match-county-division-2"
+                        title="Gloucestershire v Leicestershire, 13th Match - LEIC Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Gloucestershire vs Leicestershire</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">13th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/113388/leic-vs-nhnts-15th-match-county-division-2"
+                        title="Leicestershire v Northamptonshire, 15th Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Leicestershire vs Northamptonshire</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">15th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/113415/glam-vs-derby-18th-match-county-division-2"
+                        title="Glamorgan v Derbyshire, 18th Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Glamorgan vs Derbyshire</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">18th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/113406/lancs-vs-gloucs-17th-match-county-division-2"
+                        title="Lancashire v Gloucestershire, 17th Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Lancashire vs Gloucestershire</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">17th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/113397/mdx-vs-kent-16th-match-county-division-2"
+                        title="Middlesex v Kent, 16th Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm">Middlesex vs Kent</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">16th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-scg-srs-nm">County Division 1</div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/112920/sus-vs-notts-16th-match-county-division-1"
+                        title="Sussex v Nottinghamshire, 16th Match - NOTTS Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Sussex vs Nottinghamshire</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">16th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/112932/worcs-vs-dur-18th-match-county-division-1"
+                        title="Worcestershire v Durham, 18th Match - DUR Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Worcestershire vs Durham</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">18th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/112929/som-vs-sur-17th-match-county-division-1"
+                        title="Somerset v Surrey, 17th Match - SUR Won"
+                        ><span class="cb-mm-mtch-tm">Somerset vs Surrey</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">17th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/112950/som-vs-ess-21st-match-county-division-1"
+                        title="Somerset v Essex, 21st Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm">Somerset vs Essex</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">21st Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/112941/ham-vs-dur-20th-match-county-division-1"
+                        title="Hampshire v Durham, 20th Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm">Hampshire vs Durham</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">20th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/112938/yorks-vs-warks-19th-match-county-division-1"
+                        title="Yorkshire v Warwickshire, 19th Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Yorkshire vs Warwickshire</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">19th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mm-typ">WOMEN</div>
+                    <div class="cb-scg-srs-nm">
+                      Sri Lanka Womens Tri-Nation Series, 2025
+                    </div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/116029/indw-vs-rsaw-2nd-match-sri-lanka-womens-tri-nation-series-2025"
+                        title="India Women v South Africa Women, 2nd Match - INDW Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >India Women vs South Africa Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">2nd Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/116031/slw-vs-rsaw-3rd-match-sri-lanka-womens-tri-nation-series-2025"
+                        title="Sri Lanka Women v South Africa Women, 3rd Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Sri Lanka Women vs South Africa Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">3rd Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-scg-srs-nm">
+                      Kalahari Womens T20I Tournament
+                    </div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/116579/mozw-vs-slew-9th-match-kalahari-womens-t20i-tournament"
+                        title="Mozambique Women v Sierra Leone Women, 9th Match - SLEW Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Mozambique Women vs Sierra Leone Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">9th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/116585/swtw-vs-bwaw-10th-match-kalahari-womens-t20i-tournament"
+                        title="Eswatini Women v Botswana Women, 10th Match - BWAW Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Eswatini Women vs Botswana Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">10th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118286/bwaw-vs-slew-11th-match-kalahari-womens-t20i-tournament"
+                        title="Botswana Women v Sierra Leone Women, 11th Match - SLEW Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Botswana Women vs Sierra Leone Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">11th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118295/mozw-vs-swtw-12th-match-kalahari-womens-t20i-tournament"
+                        title="Mozambique Women v Eswatini Women, 12th Match - MOZW Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Mozambique Women vs Eswatini Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">12th Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118298/swtw-vs-mozw-3rd-place-play-off-kalahari-womens-t20i-tournament"
+                        title="Eswatini Women v Mozambique Women, 3rd Place Play-off - Toss"
+                        ><span class="cb-mm-mtch-tm"
+                          >Eswatini Women vs Mozambique Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">3rd Place Play-off</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118304/bwaw-vs-slew-final-kalahari-womens-t20i-tournament"
+                        title="Botswana Women v Sierra Leone Women, Final - Preview"
+                        ><span class="cb-mm-mtch-tm"
+                          >Botswana Women vs Sierra Leone Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">Final</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-scg-srs-nm">
+                      Zimbabwe Women tour of USA, 2025
+                    </div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118322/zimw-vs-usaw-3rd-t20i-zimbabwe-women-tour-of-usa-2025"
+                        title="Zimbabwe Women v United States of America Women, 3rd T20I - USAW Won"
+                        ><span class="cb-mm-mtch-tm"
+                          >Zimbabwe Women vs United States of America
+                          Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">3rd T20I</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118331/usaw-vs-zimw-1st-odi-zimbabwe-women-tour-of-usa-2025"
+                        title="United States of America Women v Zimbabwe Women, 1st ODI - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >United States of America Women vs Zimbabwe
+                          Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">1st ODI</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-scg-srs-nm">
+                      Cyprus Women tour of Czech Republic, 2025
+                    </div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/118253/czew-vs-cypw-1st-match-cyprus-women-tour-of-czech-republic-2025"
+                        title="Czech Republic Women v Cyprus Women, 1st Match - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Czech Republic Women vs Cyprus Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">1st Match</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="cb-lst-mtch cb-lst-dom">
+                  <div style="display: inline-block">
+                    <div class="cb-scg-srs-nm">
+                      Kuwait Women tour of Botswana 2025
+                    </div>
+                    <div class="cb-mtch-all cb-nt-live cb-nt-today">
+                      <a
+                        target="_self"
+                        href="/live-cricket-scores/117497/bwaw-vs-kuww-1st-t20i-kuwait-women-tour-of-botswana-2025"
+                        title="Botswana Women v Kuwait Women, 1st T20I - Upcoming"
+                        ><span class="cb-mm-mtch-tm"
+                          >Botswana Women vs Kuwait Women</span
+                        ><span class="cb-mm-liv-tag"></span
+                      ></a>
+                      <div class="cb-mm-mtch-nm">1st T20I</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var matchId = "114976";
+      var seriesId = "9237";
+      PAGE_TARGETS["match"] = matchId;
+      PAGE_TARGETS["series"] = seriesId;
+      PAGE_TARGETS["team"] = [58, 62];
+    </script>
+    <div id="strip_wrapper" class="cb-col cb-col-100">
+      <div id="large_strip" class="pull-left ad-unit"></div>
+      <div id="small_strip" class="pull-right ad-unit"></div>
+      <div id="super_strip" class="pull-left ad-unit"></div>
+    </div>
+    <div class="cb-col cb-col-100 cb-bg-white">
+      <div
+        class="cb-nav-main cb-col-100 cb-col cb-bg-white"
+        itemscope
+        itemtype="http://schema.org/SportsEvent"
+      >
+        <div class="cb-billing-plans-text cb-team-lft-item">
+          <h1 class="cb-nav-hdr cb-font-18 line-ht24" itemprop="name">
+            Chennai Super Kings vs Mumbai Indians, 3rd Match - Live Cricket
+            Score, Commentary
+          </h1>
+        </div>
+        <span
+          itemprop="description"
+          content="Follow Chennai Super Kings vs Mumbai Indians, 3rd Match, Mar 23, Indian Premier League 2025 with live Cricket score, ball by ball commentary updates on Cricbuzz"
+        ></span>
+        <div class="cb-nav-subhdr cb-font-12">
+          <span class="text-bold">Series: </span>
+          <a
+            href="/cricket-series/9237/indian-premier-league-2025"
+            title="Indian Premier League 2025"
+            ><span class="text-hvr-underline text-gray"
+              >Indian Premier League 2025</span
+            ></a
+          >
+          <span class="text-bold pad-left">Venue: </span
+          ><a
+            href="/cricket-series/9237/indian-premier-league-2025/venues/11/ma-chidambaram-stadium"
+            title="MA Chidambaram Stadium, Chennai"
+            itemprop="location"
+            itemscope
+            itemtype="http://schema.org/Place"
+            ><span class="text-hvr-underline text-gray"
+              ><span itemprop="name">MA Chidambaram Stadium,&nbsp;</span
+              ><span
+                itemprop="address"
+                itemscope
+                itemtype="http://schema.org/PostalAddress"
+                ><span itemprop="addressLocality">Chennai</span></span
+              ></span
+            ></a
+          >
+          <span class="text-bold pad-left">Date & Time: </span
+          ><span itemprop="startDate" content="2025-03-23T14:00:00+00:00"
+            ><span>Mar 23,&nbsp;</span><span>07:30 PM</span
+            ><span>&nbsp;LOCAL</span
+            ><span itemprop="endDate" content="2025-03-23"></span>
+          </span>
+        </div>
+        <nav class="cb-nav-bar" role="navigation">
+          <a
+            class="cb-nav-tab"
+            href="/cricket-scores/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match Live Scores & Commentary"
+            >Commentary</a
+          >
+          <a
+            class="cb-nav-tab active"
+            href="/live-cricket-scorecard/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match Scorecard"
+            >Scorecard</a
+          >
+          <a
+            class="cb-nav-tab"
+            href="/cricket-match-squads/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match Squads"
+            >Squads</a
+          >
+          <a
+            class="cb-nav-tab"
+            href="/cricket-match-highlights/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match Highlights"
+            target="_self"
+            >Highlights</a
+          >
+          <a
+            class="cb-nav-tab"
+            href="/cricket-full-commentary/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match Full Commentary"
+          >
+            Full Commentary</a
+          >
+          <a
+            class="cb-nav-tab"
+            href="/live-cricket-match-blog/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match Live Blog"
+            >Live Blog</a
+          >
+          <a
+            class="cb-nav-tab"
+            href="/cricket-series/9237/indian-premier-league-2025/points-table"
+            title="Indian Premier League 2025 Points Table"
+            target="_blank"
+            >Points Table</a
+          >
+          <a
+            class="cb-nav-tab"
+            href="/cricket-match-facts/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match Match Facts"
+            >Match Facts</a
+          >
+          <a
+            class="cb-nav-tab"
+            href="/cricket-match-news/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match News"
+            >News</a
+          >
+          <a
+            class="cb-nav-tab"
+            href="/cricket-match-photos/114976/csk-vs-mi-3rd-match-indian-premier-league-2025"
+            title="Chennai Super Kings vs Mumbai Indians, 3rd Match Photos"
+            >Photos</a
+          >
+        </nav>
+      </div>
+      <script>
+        CTEventName = "Screen View";
+        CTEventObj["Screen Name"] = "match|114976|live|csk v mi";
+      </script>
+      <div
+        class="cb-col cb-col-67 cb-scrd-lft-col html-refresh"
+        url="/api/html/cricket-scorecard/114976"
+        timeout="30000"
+        ng-init="seriesId='9237';"
+      >
+        <div class="cb-col cb-scrcrd-status cb-col-100 cb-text-complete">
+          Chennai Super Kings won by 4 wkts
+        </div>
+        <div id="innings_1">
+          <div class="cb-col cb-col-100 cb-ltst-wgt-hdr">
+            <div class="cb-col cb-col-100 cb-scrd-hdr-rw">
+              <span>Mumbai Indians Innings</span>
+              <span class="pull-right">155-9 (20 Ov)</span>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray">
+              <div class="cb-col cb-col-25 text-bold">Batter</div>
+              <div class="cb-col cb-col-33"></div>
+              <div class="cb-col cb-col-8 text-right text-bold">R</div>
+              <div class="cb-col cb-col-8 text-right">B</div>
+              <div class="cb-col cb-col-8 text-right">4s</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                6s
+              </div>
+              <div class="cb-col cb-col-8 text-right">SR</div>
+              <div class="cb-col cb-col-82 text-right"></div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/576/rohit"
+                  title="View profile of Rohit"
+                  class="cb-text-link"
+                >
+                  Rohit
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">c Shivam Dube b Khaleel Ahmed</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">0</div>
+              <div class="cb-col cb-col-8 text-right">4</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">0.00</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Rohit"
+                  href="/player-match-highlights/114976/1/576/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/13070/rickelton"
+                  title="View profile of Rickelton"
+                  class="cb-text-link"
+                >
+                  Rickelton (wk)
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">b Khaleel Ahmed</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">13</div>
+              <div class="cb-col cb-col-8 text-right">7</div>
+              <div class="cb-col cb-col-8 text-right">3</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">185.71</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Rickelton"
+                  href="/player-match-highlights/114976/1/13070/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/12258/will-jacks"
+                  title="View profile of Will Jacks"
+                  class="cb-text-link"
+                >
+                  Will Jacks
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">c Shivam Dube b Ashwin</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">11</div>
+              <div class="cb-col cb-col-8 text-right">7</div>
+              <div class="cb-col cb-col-8 text-right">2</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">157.14</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Will Jacks"
+                  href="/player-match-highlights/114976/1/12258/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/7915/suryakumar-yadav"
+                  title="View profile of Suryakumar Yadav"
+                  class="cb-text-link"
+                >
+                  Suryakumar Yadav (c)
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">st Dhoni b Noor Ahmad</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">29</div>
+              <div class="cb-col cb-col-8 text-right">26</div>
+              <div class="cb-col cb-col-8 text-right">2</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                1
+              </div>
+              <div class="cb-col cb-col-8 text-right">111.54</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Suryakumar Yadav"
+                  href="/player-match-highlights/114976/1/7915/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/14504/tilak-varma"
+                  title="View profile of Tilak Varma"
+                  class="cb-text-link"
+                >
+                  Tilak Varma
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">lbw b Noor Ahmad</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">31</div>
+              <div class="cb-col cb-col-8 text-right">25</div>
+              <div class="cb-col cb-col-8 text-right">2</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                2
+              </div>
+              <div class="cb-col cb-col-8 text-right">124.00</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Tilak Varma"
+                  href="/player-match-highlights/114976/1/14504/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/36454/robin-minz"
+                  title="View profile of Robin Minz"
+                  class="cb-text-link"
+                >
+                  Robin Minz
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">c Ravindra Jadeja b Noor Ahmad</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">3</div>
+              <div class="cb-col cb-col-8 text-right">9</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">33.33</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Robin Minz"
+                  href="/player-match-highlights/114976/1/36454/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/36139/naman-dhir"
+                  title="View profile of Naman Dhir"
+                  class="cb-text-link"
+                >
+                  Naman Dhir
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">b Noor Ahmad</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">17</div>
+              <div class="cb-col cb-col-8 text-right">12</div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">141.67</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Naman Dhir"
+                  href="/player-match-highlights/114976/1/36139/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/10100/santner"
+                  title="View profile of Santner"
+                  class="cb-text-link"
+                >
+                  Santner
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">lbw b Nathan Ellis</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">11</div>
+              <div class="cb-col cb-col-8 text-right">13</div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">84.62</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Santner"
+                  href="/player-match-highlights/114976/1/10100/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/7836/d-chahar"
+                  title="View profile of D Chahar"
+                  class="cb-text-link"
+                >
+                  D Chahar
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">not out</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">28</div>
+              <div class="cb-col cb-col-8 text-right">15</div>
+              <div class="cb-col cb-col-8 text-right">2</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                2
+              </div>
+              <div class="cb-col cb-col-8 text-right">186.67</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of D Chahar"
+                  href="/player-match-highlights/114976/1/7836/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/8117/boult"
+                  title="View profile of Boult"
+                  class="cb-text-link"
+                >
+                  Boult
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">c Ruturaj Gaikwad b Khaleel Ahmed</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">1</div>
+              <div class="cb-col cb-col-8 text-right">2</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">50.00</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Boult"
+                  href="/player-match-highlights/114976/1/8117/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/1431171/satyanarayana-raju"
+                  title="View profile of Satyanarayana Raju"
+                  class="cb-text-link"
+                >
+                  Satyanarayana Raju
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">not out</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">1</div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">100.00</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Satyanarayana Raju"
+                  href="/player-match-highlights/114976/1/1431171/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-60">Extras</div>
+              <div class="cb-col cb-col-8 text-bold cb-text-black text-right">
+                10
+              </div>
+              <div class="cb-col-32 cb-col">
+                &nbsp;(b 4, lb 1, w 4, nb 1, p 0)
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-60">Total</div>
+              <div class="cb-col cb-col-8 text-bold text-black text-right">
+                155
+              </div>
+              <div class="cb-col-32 cb-col">&nbsp;(9 wkts, 20 Ov)</div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-27">Did not Bat</div>
+              <div class="cb-col-73 cb-col">
+                <a
+                  href="/profiles/1447337/vignesh-puthur"
+                  title="View profile of Vignesh Puthur"
+                  class="cb-text-link"
+                  >Vignesh Puthur
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray text-bold">
+            Fall of Wickets
+          </div>
+          <div class="cb-col cb-col-100 cb-col-rt cb-font-13">
+            <span
+              >0-1 (<a
+                href="/profiles/576/rohit"
+                title="View profile of Rohit"
+                class="cb-text-link"
+                >Rohit</a
+              >, 0.4), </span
+            ><span
+              >21-2 (<a
+                href="/profiles/13070/rickelton"
+                title="View profile of Rickelton"
+                class="cb-text-link"
+                >Rickelton</a
+              >, 2.2), </span
+            ><span
+              >36-3 (<a
+                href="/profiles/12258/will-jacks"
+                title="View profile of Will Jacks"
+                class="cb-text-link"
+                >Will Jacks</a
+              >, 4.4), </span
+            ><span
+              >87-4 (<a
+                href="/profiles/7915/suryakumar-yadav"
+                title="View profile of Suryakumar Yadav"
+                class="cb-text-link"
+                >Suryakumar Yadav</a
+              >, 10.3), </span
+            ><span
+              >95-5 (<a
+                href="/profiles/36454/robin-minz"
+                title="View profile of Robin Minz"
+                class="cb-text-link"
+                >Robin Minz</a
+              >, 12.4), </span
+            ><span
+              >96-6 (<a
+                href="/profiles/14504/tilak-varma"
+                title="View profile of Tilak Varma"
+                class="cb-text-link"
+                >Tilak Varma</a
+              >, 12.6), </span
+            ><span
+              >118-7 (<a
+                href="/profiles/36139/naman-dhir"
+                title="View profile of Naman Dhir"
+                class="cb-text-link"
+                >Naman Dhir</a
+              >, 16.1), </span
+            ><span
+              >128-8 (<a
+                href="/profiles/10100/santner"
+                title="View profile of Santner"
+                class="cb-text-link"
+                >Santner</a
+              >, 17.6), </span
+            ><span
+              >141-9 (<a
+                href="/profiles/8117/boult"
+                title="View profile of Boult"
+                class="cb-text-link"
+                >Boult</a
+              >, 18.6)</span
+            >
+          </div>
+          <div class="cb-col cb-col-100 cb-ltst-wgt-hdr">
+            <div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray">
+              <div class="cb-col cb-col-38 text-bold">Bowler</div>
+              <div class="cb-col cb-col-8 text-right">O</div>
+              <div class="cb-col cb-col-8 text-right">M</div>
+              <div class="cb-col cb-col-10 text-right">R</div>
+              <div class="cb-col cb-col-8 text-bold text-right">W</div>
+              <div class="cb-col cb-col-8 text-right">NB</div>
+              <div class="cb-col cb-col-8 text-right">WD</div>
+              <div class="cb-col cb-col-10 text-right">ECO</div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/10952/khaleel-ahmed"
+                  title="View profile of Khaleel Ahmed"
+                  class="cb-text-link"
+                >
+                  Khaleel Ahmed
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">4</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">29</div>
+              <div class="cb-col cb-col-8 text-right text-bold">3</div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">7.20</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Khaleel Ahmed"
+                  href="/player-match-highlights/114976/1/10952/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/10420/sam-curran"
+                  title="View profile of Sam Curran"
+                  class="cb-text-link"
+                >
+                  Sam Curran
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">13</div>
+              <div class="cb-col cb-col-8 text-right text-bold">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">13.00</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Sam Curran"
+                  href="/player-match-highlights/114976/1/10420/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/15480/nathan-ellis"
+                  title="View profile of Nathan Ellis"
+                  class="cb-text-link"
+                >
+                  Nathan Ellis
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">4</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">38</div>
+              <div class="cb-col cb-col-8 text-right text-bold">1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div class="cb-col cb-col-10 text-right">9.50</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Nathan Ellis"
+                  href="/player-match-highlights/114976/1/15480/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/1593/ashwin"
+                  title="View profile of Ashwin"
+                  class="cb-text-link"
+                >
+                  Ashwin
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">4</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">31</div>
+              <div class="cb-col cb-col-8 text-right text-bold">1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">7.80</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Ashwin"
+                  href="/player-match-highlights/114976/1/1593/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/587/ravindra-jadeja"
+                  title="View profile of Ravindra Jadeja"
+                  class="cb-text-link"
+                >
+                  Ravindra Jadeja
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">3</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">21</div>
+              <div class="cb-col cb-col-8 text-right text-bold">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">7.00</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Ravindra Jadeja"
+                  href="/player-match-highlights/114976/1/587/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/15452/noor-ahmad"
+                  title="View profile of Noor Ahmad"
+                  class="cb-text-link"
+                >
+                  Noor Ahmad
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">4</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">18</div>
+              <div class="cb-col cb-col-8 text-right text-bold">4</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">3</div>
+              <div class="cb-col cb-col-10 text-right">4.50</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Noor Ahmad"
+                  href="/player-match-highlights/114976/1/15452/bowling"
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-ltst-wgt-hdr">
+            <div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray text-bold">
+              <div class="cb-col cb-col-33">Powerplays</div>
+              <div class="cb-col cb-col-33 text-center">Overs</div>
+              <div class="cb-col cb-col-33 text-right">Runs</div>
+            </div>
+            <div class="cb-col cb-col-100 cb-col-rt cb-font-13">
+              <div class="cb-col cb-col-33">Mandatory</div>
+              <div class="cb-col cb-col-33 text-center">0.1-6</div>
+              <div class="cb-col cb-col-33 text-right">52</div>
+            </div>
+          </div>
+        </div>
+        <div id="innings_2">
+          <div class="cb-col cb-col-100 cb-ltst-wgt-hdr">
+            <div class="cb-col cb-col-100 cb-scrd-hdr-rw">
+              <span>Chennai Super Kings Innings</span>
+              <span class="pull-right">158-6 (19.1 Ov)</span>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray">
+              <div class="cb-col cb-col-25 text-bold">Batter</div>
+              <div class="cb-col cb-col-33"></div>
+              <div class="cb-col cb-col-8 text-right text-bold">R</div>
+              <div class="cb-col cb-col-8 text-right">B</div>
+              <div class="cb-col cb-col-8 text-right">4s</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                6s
+              </div>
+              <div class="cb-col cb-col-8 text-right">SR</div>
+              <div class="cb-col cb-col-82 text-right"></div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/11177/rachin-ravindra"
+                  title="View profile of Rachin Ravindra"
+                  class="cb-text-link"
+                >
+                  Rachin Ravindra
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">not out</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">65</div>
+              <div class="cb-col cb-col-8 text-right">45</div>
+              <div class="cb-col cb-col-8 text-right">2</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                4
+              </div>
+              <div class="cb-col cb-col-8 text-right">144.44</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Rachin Ravindra"
+                  href="/player-match-highlights/114976/2/11177/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/9012/rahul-tripathi"
+                  title="View profile of Rahul Tripathi"
+                  class="cb-text-link"
+                >
+                  Rahul Tripathi
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">c Rickelton b D Chahar</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">2</div>
+              <div class="cb-col cb-col-8 text-right">3</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">66.67</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Rahul Tripathi"
+                  href="/player-match-highlights/114976/2/9012/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/11813/ruturaj-gaikwad"
+                  title="View profile of Ruturaj Gaikwad"
+                  class="cb-text-link"
+                >
+                  Ruturaj Gaikwad (c)
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">c Will Jacks b Vignesh Puthur</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">53</div>
+              <div class="cb-col cb-col-8 text-right">26</div>
+              <div class="cb-col cb-col-8 text-right">6</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                3
+              </div>
+              <div class="cb-col cb-col-8 text-right">203.85</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Ruturaj Gaikwad"
+                  href="/player-match-highlights/114976/2/11813/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/11195/shivam-dube"
+                  title="View profile of Shivam Dube"
+                  class="cb-text-link"
+                >
+                  Shivam Dube
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">c Tilak Varma b Vignesh Puthur</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">9</div>
+              <div class="cb-col cb-col-8 text-right">7</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                1
+              </div>
+              <div class="cb-col cb-col-8 text-right">128.57</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Shivam Dube"
+                  href="/player-match-highlights/114976/2/11195/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/9427/deepak-hooda"
+                  title="View profile of Deepak Hooda"
+                  class="cb-text-link"
+                >
+                  Deepak Hooda
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray"
+                  >c Satyanarayana Raju b Vignesh Puthur</span
+                >
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">3</div>
+              <div class="cb-col cb-col-8 text-right">5</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">60.00</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Deepak Hooda"
+                  href="/player-match-highlights/114976/2/9427/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/10420/sam-curran"
+                  title="View profile of Sam Curran"
+                  class="cb-text-link"
+                >
+                  Sam Curran
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">b Will Jacks</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">4</div>
+              <div class="cb-col cb-col-8 text-right">9</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">44.44</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Sam Curran"
+                  href="/player-match-highlights/114976/2/10420/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/587/ravindra-jadeja"
+                  title="View profile of Ravindra Jadeja"
+                  class="cb-text-link"
+                >
+                  Ravindra Jadeja
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">run out (D Chahar/Rickelton)</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">17</div>
+              <div class="cb-col cb-col-8 text-right">18</div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">94.44</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Ravindra Jadeja"
+                  href="/player-match-highlights/114976/2/587/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-25">
+                <a
+                  href="/profiles/265/ms-dhoni"
+                  title="View profile of MS Dhoni"
+                  class="cb-text-link"
+                >
+                  MS Dhoni (wk)
+                </a>
+              </div>
+              <div class="cb-col cb-col-33">
+                <span class="text-gray">not out</span>
+              </div>
+              <div class="cb-col cb-col-8 text-right text-bold">0</div>
+              <div class="cb-col cb-col-8 text-right">2</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div
+                class="cb-col cb-col-8 text-right"
+                style="padding-right: 10px"
+              >
+                0
+              </div>
+              <div class="cb-col cb-col-8 text-right">0.00</div>
+              <div class="cb-col text-right cb-col-2">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of MS Dhoni"
+                  href="/player-match-highlights/114976/2/265/batting"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-60">Extras</div>
+              <div class="cb-col cb-col-8 text-bold cb-text-black text-right">
+                5
+              </div>
+              <div class="cb-col-32 cb-col">
+                &nbsp;(b 0, lb 0, w 5, nb 0, p 0)
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-60">Total</div>
+              <div class="cb-col cb-col-8 text-bold text-black text-right">
+                158
+              </div>
+              <div class="cb-col-32 cb-col">&nbsp;(6 wkts, 19.1 Ov)</div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-27">Did not Bat</div>
+              <div class="cb-col-73 cb-col">
+                <a
+                  href="/profiles/1593/ravichandran-ashwin"
+                  title="View profile of Ravichandran Ashwin"
+                  class="cb-text-link"
+                  >Ravichandran Ashwin </a
+                >,
+                <a
+                  href="/profiles/15452/noor-ahmad"
+                  title="View profile of Noor Ahmad"
+                  class="cb-text-link"
+                  >Noor Ahmad </a
+                >,
+                <a
+                  href="/profiles/15480/nathan-ellis"
+                  title="View profile of Nathan Ellis"
+                  class="cb-text-link"
+                  >Nathan Ellis </a
+                >,
+                <a
+                  href="/profiles/10952/khaleel-ahmed"
+                  title="View profile of Khaleel Ahmed"
+                  class="cb-text-link"
+                  >Khaleel Ahmed
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray text-bold">
+            Fall of Wickets
+          </div>
+          <div class="cb-col cb-col-100 cb-col-rt cb-font-13">
+            <span
+              >11-1 (<a
+                href="/profiles/9012/rahul-tripathi"
+                title="View profile of Rahul Tripathi"
+                class="cb-text-link"
+                >Rahul Tripathi</a
+              >, 1.4), </span
+            ><span
+              >78-2 (<a
+                href="/profiles/11813/ruturaj-gaikwad"
+                title="View profile of Ruturaj Gaikwad"
+                class="cb-text-link"
+                >Ruturaj Gaikwad</a
+              >, 7.5), </span
+            ><span
+              >95-3 (<a
+                href="/profiles/11195/shivam-dube"
+                title="View profile of Shivam Dube"
+                class="cb-text-link"
+                >Shivam Dube</a
+              >, 9.4), </span
+            ><span
+              >107-4 (<a
+                href="/profiles/9427/deepak-hooda"
+                title="View profile of Deepak Hooda"
+                class="cb-text-link"
+                >Deepak Hooda</a
+              >, 11.4), </span
+            ><span
+              >116-5 (<a
+                href="/profiles/10420/sam-curran"
+                title="View profile of Sam Curran"
+                class="cb-text-link"
+                >Sam Curran</a
+              >, 14.1), </span
+            ><span
+              >152-6 (<a
+                href="/profiles/587/ravindra-jadeja"
+                title="View profile of Ravindra Jadeja"
+                class="cb-text-link"
+                >Ravindra Jadeja</a
+              >, 18.4)</span
+            >
+          </div>
+          <div class="cb-col cb-col-100 cb-ltst-wgt-hdr">
+            <div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray">
+              <div class="cb-col cb-col-38 text-bold">Bowler</div>
+              <div class="cb-col cb-col-8 text-right">O</div>
+              <div class="cb-col cb-col-8 text-right">M</div>
+              <div class="cb-col cb-col-10 text-right">R</div>
+              <div class="cb-col cb-col-8 text-bold text-right">W</div>
+              <div class="cb-col cb-col-8 text-right">NB</div>
+              <div class="cb-col cb-col-8 text-right">WD</div>
+              <div class="cb-col cb-col-10 text-right">ECO</div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/8117/trent-boult"
+                  title="View profile of Trent Boult"
+                  class="cb-text-link"
+                >
+                  Trent Boult
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">3</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">27</div>
+              <div class="cb-col cb-col-8 text-right text-bold">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div class="cb-col cb-col-10 text-right">9.00</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Trent Boult"
+                  href="/player-match-highlights/114976/2/8117/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/7836/deepak-chahar"
+                  title="View profile of Deepak Chahar"
+                  class="cb-text-link"
+                >
+                  Deepak Chahar
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">2</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">18</div>
+              <div class="cb-col cb-col-8 text-right text-bold">1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">9.00</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Deepak Chahar"
+                  href="/player-match-highlights/114976/2/7836/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/1431171/satyanarayana-raju"
+                  title="View profile of Satyanarayana Raju"
+                  class="cb-text-link"
+                >
+                  Satyanarayana Raju
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">13</div>
+              <div class="cb-col cb-col-8 text-right text-bold">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">1</div>
+              <div class="cb-col cb-col-10 text-right">13.00</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Satyanarayana Raju"
+                  href="/player-match-highlights/114976/2/1431171/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/10100/mitchell-santner"
+                  title="View profile of Mitchell Santner"
+                  class="cb-text-link"
+                >
+                  Mitchell Santner
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">2.1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">24</div>
+              <div class="cb-col cb-col-8 text-right text-bold">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">11.10</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Mitchell Santner"
+                  href="/player-match-highlights/114976/2/10100/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/12258/will-jacks"
+                  title="View profile of Will Jacks"
+                  class="cb-text-link"
+                >
+                  Will Jacks
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">4</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">32</div>
+              <div class="cb-col cb-col-8 text-right text-bold">1</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">3</div>
+              <div class="cb-col cb-col-10 text-right">8.00</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Will Jacks"
+                  href="/player-match-highlights/114976/2/12258/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/1447337/vignesh-puthur"
+                  title="View profile of Vignesh Puthur"
+                  class="cb-text-link"
+                >
+                  Vignesh Puthur
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">4</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">32</div>
+              <div class="cb-col cb-col-8 text-right text-bold">3</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">8.00</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Vignesh Puthur"
+                  href="/player-match-highlights/114976/2/1447337/bowling"
+                ></a>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-scrd-itms">
+              <div class="cb-col cb-col-38">
+                <a
+                  href="/profiles/36139/naman-dhir"
+                  title="View profile of Naman Dhir"
+                  class="cb-text-link"
+                >
+                  Naman Dhir
+                </a>
+              </div>
+              <div class="cb-col cb-col-8 text-right">3</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">12</div>
+              <div class="cb-col cb-col-8 text-right text-bold">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-8 text-right">0</div>
+              <div class="cb-col cb-col-10 text-right">4.00</div>
+              <div class="cb-col cb-col-2 text-right">
+                <a
+                  class="cb-ico cb-caret-right"
+                  title="view Highlights of Naman Dhir"
+                  href="/player-match-highlights/114976/2/36139/bowling"
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-ltst-wgt-hdr">
+            <div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray text-bold">
+              <div class="cb-col cb-col-33">Powerplays</div>
+              <div class="cb-col cb-col-33 text-center">Overs</div>
+              <div class="cb-col cb-col-33 text-right">Runs</div>
+            </div>
+            <div class="cb-col cb-col-100 cb-col-rt cb-font-13">
+              <div class="cb-col cb-col-33">Mandatory</div>
+              <div class="cb-col cb-col-33 text-center">0.1-6</div>
+              <div class="cb-col cb-col-33 text-right">62</div>
+            </div>
+          </div>
+        </div>
+        <div class="cb-col cb-col-100">
+          <div class="cb-col cb-col-100 cb-scrd-hdr-rw">Match Info</div>
+          <div class="cb-col cb-col-100 cb-font-13">
+            <div class="cb-col cb-col-100 cb-mtch-info-itm">
+              <div class="cb-col cb-col-27">Match</div>
+              <div class="cb-col cb-col-73">
+                CSK vs MI, 3rd Match, Indian Premier League 2025
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-mtch-info-itm">
+              <div class="cb-col cb-col-27">Date</div>
+              <div class="cb-col cb-col-73">
+                <span
+                  class="schedule-date"
+                  timestamp="1742738400000"
+                  venue="+05:30"
+                  format="EEEE, MMMM dd, yyyy"
+                ></span>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-mtch-info-itm">
+              <div class="cb-col cb-col-27">Toss</div>
+              <div class="cb-col cb-col-73">
+                Chennai Super Kings won the toss and opt to bowl
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-mtch-info-itm">
+              <div class="cb-col cb-col-27">Time</div>
+              <div class="cb-col cb-col-73">
+                <span
+                  class="schedule-date"
+                  timestamp="1742738400000"
+                  venue="+05:30"
+                  format="h:mm a"
+                ></span>
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-mtch-info-itm">
+              <div class="cb-col cb-col-27">Venue</div>
+              <div class="cb-col cb-col-73">
+                MA Chidambaram Stadium, Chennai
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-mtch-info-itm">
+              <div class="cb-col cb-col-27">Umpires</div>
+              <div class="cb-col cb-col-73">
+                KN Anantha Padmanabhan, Saiyed Khalid
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-mtch-info-itm">
+              <div class="cb-col cb-col-27">Third Umpire</div>
+              <div class="cb-col cb-col-73">Nitin Menon</div>
+            </div>
+            <div class="cb-col cb-col-100 cb-mtch-info-itm">
+              <div class="cb-col cb-col-27">Match Referee</div>
+              <div class="cb-col cb-col-73">Javagal Srinath</div>
+            </div>
+            <div class="cb-col cb-col-100 cb-minfo-tm-nm">
+              Chennai Super Kings&nbsp;Squad
+            </div>
+            <div class="cb-col cb-col-100 cb-minfo-tm-nm">
+              <div class="cb-col cb-col-27">Playing</div>
+              <div class="cb-col cb-col-73">
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/11813/ruturaj-gaikwad"
+                  title="View profile of Ruturaj Gaikwad"
+                  >Ruturaj Gaikwad (c)</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/11177/rachin-ravindra"
+                  title="View profile of Rachin Ravindra"
+                  >Rachin Ravindra</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/9427/deepak-hooda"
+                  title="View profile of Deepak Hooda"
+                  >Deepak Hooda</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/11195/shivam-dube"
+                  title="View profile of Shivam Dube"
+                  >Shivam Dube</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/587/ravindra-jadeja"
+                  title="View profile of Ravindra Jadeja"
+                  >Ravindra Jadeja</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/10420/sam-curran"
+                  title="View profile of Sam Curran"
+                  >Sam Curran</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/265/ms-dhoni"
+                  title="View profile of MS Dhoni"
+                  >MS Dhoni (wk)</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/1593/ravichandran-ashwin"
+                  title="View profile of Ravichandran Ashwin"
+                  >Ravichandran Ashwin</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/15452/noor-ahmad"
+                  title="View profile of Noor Ahmad"
+                  >Noor Ahmad</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/15480/nathan-ellis"
+                  title="View profile of Nathan Ellis"
+                  >Nathan Ellis</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/10952/khaleel-ahmed"
+                  title="View profile of Khaleel Ahmed"
+                  >Khaleel Ahmed</a
+                >
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-minfo-tm-nm">
+              <div class="cb-col cb-col-27">Bench</div>
+              <div class="cb-col cb-col-73">
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/9012/rahul-tripathi"
+                  title="View profile of Rahul Tripathi"
+                  >Rahul Tripathi</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/12092/kamlesh-nagarkoti"
+                  title="View profile of Kamlesh Nagarkoti"
+                  >Kamlesh Nagarkoti</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/8204/vijay-shankar"
+                  title="View profile of Vijay Shankar"
+                  >Vijay Shankar</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/8512/jamie-overton"
+                  title="View profile of Jamie Overton"
+                  >Jamie Overton</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/22571/shaik-rasheed"
+                  title="View profile of Shaik Rasheed"
+                  >Shaik Rasheed</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/9838/devon-conway"
+                  title="View profile of Devon Conway"
+                  >Devon Conway</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/16458/matheesha-pathirana"
+                  title="View profile of Matheesha Pathirana"
+                  >Matheesha Pathirana</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/13184/mukesh-choudhary"
+                  title="View profile of Mukesh Choudhary"
+                  >Mukesh Choudhary</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/14598/anshul-kamboj"
+                  title="View profile of Anshul Kamboj"
+                  >Anshul Kamboj</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/9746/shreyas-gopal"
+                  title="View profile of Shreyas Gopal"
+                  >Shreyas Gopal</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/19807/gurjapneet-singh"
+                  title="View profile of Gurjapneet Singh"
+                  >Gurjapneet Singh</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/32835/ramakrishna-ghosh"
+                  title="View profile of Ramakrishna Ghosh"
+                  >Ramakrishna Ghosh</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/1427488/andre-siddarth-c"
+                  title="View profile of Andre Siddarth C"
+                  >Andre Siddarth C</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/1429626/vansh-bedi"
+                  title="View profile of Vansh Bedi"
+                  >Vansh Bedi</a
+                >
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-minfo-tm-nm">
+              <div class="cb-col cb-col-27">Support Staff</div>
+              <div class="cb-col cb-col-73">
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/49/stephen-fleming"
+                  title="View profile of Stephen Fleming"
+                  >Stephen Fleming</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/4772/michael-hussey"
+                  title="View profile of Michael Hussey"
+                  >Michael Hussey</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/5487/eric-simons"
+                  title="View profile of Eric Simons"
+                  >Eric Simons</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/42611/rajiv-kumar"
+                  title="View profile of Rajiv Kumar"
+                  >Rajiv Kumar</a
+                >
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-minfo-tm-nm cb-minfo-tm2-nm">
+              Mumbai Indians&nbsp;Squad
+            </div>
+            <div class="cb-col cb-col-100 cb-minfo-tm-nm">
+              <div class="cb-col cb-col-27">Playing</div>
+              <div class="cb-col cb-col-73">
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/576/rohit-sharma"
+                  title="View profile of Rohit Sharma"
+                  >Rohit Sharma</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/13070/ryan-rickelton"
+                  title="View profile of Ryan Rickelton"
+                  >Ryan Rickelton (wk)</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/12258/will-jacks"
+                  title="View profile of Will Jacks"
+                  >Will Jacks</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/7915/suryakumar-yadav"
+                  title="View profile of Suryakumar Yadav"
+                  >Suryakumar Yadav (c)</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/14504/tilak-varma"
+                  title="View profile of Tilak Varma"
+                  >Tilak Varma</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/36139/naman-dhir"
+                  title="View profile of Naman Dhir"
+                  >Naman Dhir</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/36454/robin-minz"
+                  title="View profile of Robin Minz"
+                  >Robin Minz</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/10100/mitchell-santner"
+                  title="View profile of Mitchell Santner"
+                  >Mitchell Santner</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/7836/deepak-chahar"
+                  title="View profile of Deepak Chahar"
+                  >Deepak Chahar</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/8117/trent-boult"
+                  title="View profile of Trent Boult"
+                  >Trent Boult</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/1431171/satyanarayana-raju"
+                  title="View profile of Satyanarayana Raju"
+                  >Satyanarayana Raju</a
+                >
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-minfo-tm-nm">
+              <div class="cb-col cb-col-27">Bench</div>
+              <div class="cb-col cb-col-73">
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/1447337/vignesh-puthur"
+                  title="View profile of Vignesh Puthur"
+                  >Vignesh Puthur</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/11684/ashwani-kumar"
+                  title="View profile of Ashwani Kumar"
+                  >Ashwani Kumar</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/22601/raj-bawa"
+                  title="View profile of Raj Bawa"
+                  >Raj Bawa</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/9576/corbin-bosch"
+                  title="View profile of Corbin Bosch"
+                  >Corbin Bosch</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/1844/karn-sharma"
+                  title="View profile of Karn Sharma"
+                  >Karn Sharma</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/9311/jasprit-bumrah"
+                  title="View profile of Jasprit Bumrah"
+                  >Jasprit Bumrah</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/8349/reece-topley"
+                  title="View profile of Reece Topley"
+                  >Reece Topley</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/12071/mujeeb-ur-rahman"
+                  title="View profile of Mujeeb Ur Rahman"
+                  >Mujeeb Ur Rahman</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/9647/hardik-pandya"
+                  title="View profile of Hardik Pandya"
+                  >Hardik Pandya</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/13082/krishnan-shrijith"
+                  title="View profile of Krishnan Shrijith"
+                  >Krishnan Shrijith</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/13747/arjun-tendulkar"
+                  title="View profile of Arjun Tendulkar"
+                  >Arjun Tendulkar</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/52428/bevon-jacobs"
+                  title="View profile of Bevon Jacobs"
+                  >Bevon Jacobs</a
+                >
+              </div>
+            </div>
+            <div class="cb-col cb-col-100 cb-minfo-tm-nm">
+              <div class="cb-col cb-col-27">Support Staff</div>
+              <div class="cb-col cb-col-73">
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/657/kieron-pollard"
+                  title="View profile of Kieron Pollard"
+                  >Kieron Pollard</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/25/sachin-tendulkar"
+                  title="View profile of Sachin Tendulkar"
+                  >Sachin Tendulkar</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/111/lasith-malinga"
+                  title="View profile of Lasith Malinga"
+                  >Lasith Malinga</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/1805/jagadeesh-arunkumar"
+                  title="View profile of Jagadeesh Arunkumar"
+                  >Jagadeesh Arunkumar</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/101/mahela-jayawardene"
+                  title="View profile of Mahela Jayawardene"
+                  >Mahela Jayawardene</a
+                >,
+                <a
+                  class="margin0 text-black text-hvr-underline"
+                  href="/profiles/50341/carl-hopkinson"
+                  title="View profile of Carl Hopkinson"
+                  >Carl Hopkinson</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cb-col cb-col-33 cb-col-rt">
+        <div
+          id="mpu"
+          class="ad-unit cb-col cb-col-100"
+          style="min-height: 250px"
+        ></div>
+        <div id="mpu2" class="ad-unit cb-col cb-nav-hdr"></div>
+        <div
+          class="cb-col cb-col-100 cb-sr-hist-pad"
+          id="latest-news-mod"
+          gtm-label="scorecard"
+        >
+          <h4 class="cb-ltst-hdr">LATEST NEWS</h4>
+          <div class="cb-col cb-col-100 cb-lst-itm cb-pos-rel cb-lst-itm-sm">
+            <div
+              class="cb-col cb-col-33 cb-pos-rel"
+              itemscope
+              itemtype="https://schema.org/ImageObject"
+              itemprop="image"
+            >
+              <meta itemprop="width" content="100" />
+              <meta itemprop="height" content="77" />
+              <meta
+                itemprop="url"
+                content="https://static.cricbuzz.com/a/img/v1/100x77/i1/c353244/the-indian-menaes-and-womenae.jpg"
+              /><a
+                target="_self"
+                href="/cricket-news/134221/cricket-set-to-be-part-of-2026-asian-games-in-japan"
+                title="Cricket set to be part of 2026 Asian Games"
+                ><img
+                  height="77"
+                  width="100"
+                  alt="The Indian men’s and women’s teams are the defending gold medallists."
+                  title="The Indian men’s and women’s teams are the defending gold medallists."
+                  itemprop="image"
+                  class="cb-lst-img lazy-loading"
+                  source="https://static.cricbuzz.com/a/img/v1/100x77/i1/c353244/the-indian-menaes-and-womenae.jpg"
+                  style="padding: 0px"
+              /></a>
+            </div>
+            <div class="cb-col-67 cb-nws-lst-rt cb-col cb-col-text-container">
+              <div class="cb-ltst-wgt-hdr">
+                <a
+                  target="_self"
+                  class="cb-nws-hdln-ancr text-hvr-underline"
+                  href="/cricket-news/134221/cricket-set-to-be-part-of-2026-asian-games-in-japan"
+                  title="Cricket set to be part of 2026 Asian Games"
+                  >Cricket set to be part of 2026 Asian Games</a
+                >
+              </div>
+              <div><span class="cb-nws-time">2h ago</span></div>
+            </div>
+          </div>
+          <span
+            id="native_latest_news"
+            class="ad-native ng-cloak"
+            ng-if='!$root.$GEO.isGeo("EU")'
+            ad-loaded="false"
+            ad-content='<div class="cb-col cb-col-100 cb-lst-itm cb-lst-itm-sm" style="border-bottom: 1px solid #ecebeb"><div class="cb-col cb-col-33"><a rel="noreferrer" target="_blank" href="[[clk]]"><img style="width:90px;height:70px;" src="[[img]]" ></a></div><div class="cb-col-67 cb-nws-lst-rt cb-col cb-col-text-container"><a rel="nofollow" target="_blank" href="[[clk]]" class="cb-nws-hdln-ancr text-hvr-underline"><div class="cb-list-intro-text" style="height: 66px; overflow: hidden;">[[text]]</div><div class="cb-list-sub-text ad-native-sponsor">[[sponsor]]<img src="[[logo]]" class="pull-right" style="height:14px;" /></div></a><div style="float:right;margin-top:-85px;"><a rel="noreferrer" target="_blank" href="[[adchoicesClickURL]]"><img src="[[adchoicesImgURL]]"/></a></div></div></div>'
+          ></span>
+          <div class="cb-col cb-col-100 cb-lst-itm cb-pos-rel cb-lst-itm-sm">
+            <div
+              class="cb-col cb-col-33 cb-pos-rel"
+              itemscope
+              itemtype="https://schema.org/ImageObject"
+              itemprop="image"
+            >
+              <meta itemprop="width" content="100" />
+              <meta itemprop="height" content="77" />
+              <meta
+                itemprop="url"
+                content="https://static.cricbuzz.com/a/img/v1/100x77/i1/c682009/faruque-ahmed-took-over-as-bcb.jpg"
+              /><a
+                target="_self"
+                href="/cricket-news/134220/bcb-president-set-to-face-upcoming-board-elections"
+                title="BCB President set to face upcoming Board elections"
+                ><img
+                  height="77"
+                  width="100"
+                  alt="Faruque Ahmed took over as BCB President in August 2024."
+                  title="Faruque Ahmed took over as BCB President in August 2024."
+                  itemprop="image"
+                  class="cb-lst-img lazy-loading"
+                  source="https://static.cricbuzz.com/a/img/v1/100x77/i1/c682009/faruque-ahmed-took-over-as-bcb.jpg"
+                  style="padding: 0px"
+              /></a>
+            </div>
+            <div class="cb-col-67 cb-nws-lst-rt cb-col cb-col-text-container">
+              <div class="cb-ltst-wgt-hdr">
+                <a
+                  target="_self"
+                  class="cb-nws-hdln-ancr text-hvr-underline"
+                  href="/cricket-news/134220/bcb-president-set-to-face-upcoming-board-elections"
+                  title="BCB President set to face upcoming Board elections"
+                  >BCB President set to face upcoming Board elections</a
+                >
+              </div>
+              <div><span class="cb-nws-time">3h ago</span></div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-lst-itm cb-pos-rel cb-lst-itm-sm">
+            <div
+              class="cb-col cb-col-33 cb-pos-rel"
+              itemscope
+              itemtype="https://schema.org/ImageObject"
+              itemprop="image"
+            >
+              <meta itemprop="width" content="100" />
+              <meta itemprop="height" content="77" />
+              <meta
+                itemprop="url"
+                content="https://static.cricbuzz.com/a/img/v1/100x77/i1/c682008/pakistan-will-host-bangladesh.jpg"
+              /><a
+                target="_self"
+                href="/cricket-news/134219/bangladesh-to-tour-pakistan-for-5-t20is-in-may"
+                title="Bangladesh to tour Pakistan for 5 T20Is in May"
+                ><img
+                  height="77"
+                  width="100"
+                  alt="Pakistan will host Bangladesh in a 5 match T20I series in May"
+                  title="Pakistan will host Bangladesh in a 5 match T20I series in May"
+                  itemprop="image"
+                  class="cb-lst-img lazy-loading"
+                  source="https://static.cricbuzz.com/a/img/v1/100x77/i1/c682008/pakistan-will-host-bangladesh.jpg"
+                  style="padding: 0px"
+              /></a>
+            </div>
+            <div class="cb-col-67 cb-nws-lst-rt cb-col cb-col-text-container">
+              <div class="cb-ltst-wgt-hdr">
+                <a
+                  target="_self"
+                  class="cb-nws-hdln-ancr text-hvr-underline"
+                  href="/cricket-news/134219/bangladesh-to-tour-pakistan-for-5-t20is-in-may"
+                  title="Bangladesh to tour Pakistan for 5 T20Is in May"
+                  >Bangladesh to tour Pakistan for 5 T20Is in May</a
+                >
+              </div>
+              <div><span class="cb-nws-time">4h ago</span></div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-lst-itm cb-pos-rel cb-lst-itm-sm">
+            <div
+              class="cb-col cb-col-33 cb-pos-rel"
+              itemscope
+              itemtype="https://schema.org/ImageObject"
+              itemprop="image"
+            >
+              <meta itemprop="width" content="100" />
+              <meta itemprop="height" content="77" />
+              <meta
+                itemprop="url"
+                content="https://static.cricbuzz.com/a/img/v1/100x77/i1/c681991/kkrs-spinners-picked-up-six-w.jpg"
+              /><a
+                target="_self"
+                href="/cricket-news/134218/kkr-spinners-trump-dc-counterparts-in-a-battle-of-wits"
+                title="KKR spinners trump DC counterparts in a battle of wits "
+                ><img
+                  height="77"
+                  width="100"
+                  alt="KKR&#39;s spinners picked up six wickets in the game."
+                  title="KKR&#39;s spinners picked up six wickets in the game."
+                  itemprop="image"
+                  class="cb-lst-img lazy-loading"
+                  source="https://static.cricbuzz.com/a/img/v1/100x77/i1/c681991/kkrs-spinners-picked-up-six-w.jpg"
+                  style="padding: 0px"
+              /></a>
+            </div>
+            <div class="cb-col-67 cb-nws-lst-rt cb-col cb-col-text-container">
+              <div class="cb-ltst-wgt-hdr">
+                <a
+                  target="_self"
+                  class="cb-nws-hdln-ancr text-hvr-underline"
+                  href="/cricket-news/134218/kkr-spinners-trump-dc-counterparts-in-a-battle-of-wits"
+                  title="KKR spinners trump DC counterparts in a battle of wits "
+                  >KKR spinners trump DC counterparts in a battle of wits
+                </a>
+              </div>
+              <div><span class="cb-nws-time">8h ago</span></div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-lst-itm cb-pos-rel cb-lst-itm-sm">
+            <div
+              class="cb-col cb-col-33 cb-pos-rel"
+              itemscope
+              itemtype="https://schema.org/ImageObject"
+              itemprop="image"
+            >
+              <meta itemprop="width" content="100" />
+              <meta itemprop="height" content="77" />
+              <meta
+                itemprop="url"
+                content="https://static.cricbuzz.com/a/img/v1/100x77/i1/c681990/narine-made-an-impact-with-the.jpg"
+              /><a
+                target="_self"
+                href="/cricket-news/134217/the-fire-still-burns-for-narine-and-kkr"
+                title="The fire still burns for Narine and KKR"
+                ><img
+                  height="77"
+                  width="100"
+                  alt="Narine made an impact with the ball, with the bat and on the field as a stand-in captain."
+                  title="Narine made an impact with the ball, with the bat and on the field as a stand-in captain."
+                  itemprop="image"
+                  class="cb-lst-img lazy-loading"
+                  source="https://static.cricbuzz.com/a/img/v1/100x77/i1/c681990/narine-made-an-impact-with-the.jpg"
+                  style="padding: 0px"
+              /></a>
+            </div>
+            <div class="cb-col-67 cb-nws-lst-rt cb-col cb-col-text-container">
+              <div class="cb-ltst-wgt-hdr">
+                <a
+                  target="_self"
+                  class="cb-nws-hdln-ancr text-hvr-underline"
+                  href="/cricket-news/134217/the-fire-still-burns-for-narine-and-kkr"
+                  title="The fire still burns for Narine and KKR"
+                  >The fire still burns for Narine and KKR</a
+                >
+              </div>
+              <div><span class="cb-nws-time">9h ago</span></div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-lst-itm cb-pos-rel cb-lst-itm-sm">
+            <div
+              class="cb-col cb-col-33 cb-pos-rel"
+              itemscope
+              itemtype="https://schema.org/ImageObject"
+              itemprop="image"
+            >
+              <meta itemprop="width" content="100" />
+              <meta itemprop="height" content="77" />
+              <meta
+                itemprop="url"
+                content="https://static.cricbuzz.com/a/img/v1/100x77/i1/c681838/sunil-narine-took-3-wickets-an.jpg"
+              /><a
+                target="_self"
+                href="/cricket-news/134216/sunil-narine-keeps-kkr-alive-with-star-turn"
+                title="Narine keeps KKR alive with star-turn"
+                ><img
+                  height="77"
+                  width="100"
+                  alt="Sunil Narine took 3 wickets and effected a crucial run-out of KL Rahul."
+                  title="Sunil Narine took 3 wickets and effected a crucial run-out of KL Rahul."
+                  itemprop="image"
+                  class="cb-lst-img lazy-loading"
+                  source="https://static.cricbuzz.com/a/img/v1/100x77/i1/c681838/sunil-narine-took-3-wickets-an.jpg"
+                  style="padding: 0px"
+              /></a>
+            </div>
+            <div class="cb-col-67 cb-nws-lst-rt cb-col cb-col-text-container">
+              <div class="cb-ltst-wgt-hdr">
+                <a
+                  target="_self"
+                  class="cb-nws-hdln-ancr text-hvr-underline"
+                  href="/cricket-news/134216/sunil-narine-keeps-kkr-alive-with-star-turn"
+                  title="Narine keeps KKR alive with star-turn"
+                  >Narine keeps KKR alive with star-turn</a
+                >
+              </div>
+              <div><span class="cb-nws-time">15h ago</span></div>
+            </div>
+          </div>
+          <div class="cb-col cb-col-100 cb-more-btn-cntnr">
+            <a
+              target="_self"
+              title="Click to view more News"
+              href="/cricket-news"
+              class="cb-more-btn"
+              role="button"
+              >More News</a
+            >
+          </div>
+        </div>
+        <style>
+          .cb-topic-header {
+            margin-left: 0px !important;
+          }
+          .cb-list-heading {
+            font-weight: normal !important;
+          }
+        </style>
+        <div id="mpu3" class="ad-unit cb-col"></div>
+      </div>
+    </div>
+    <style>
+      .kaltura-play {
+        display: none;
+      }
+    </style>
+    <script>
+      var is_video_enabled = false;
+      CBQueueOnLoad.push(function () {
+        var is_video_enabled = _GEO.country == "US" || _GEO.country == "CA";
+        if (is_video_enabled) {
+          _ele("body").append(
+            "<style>.kaltura-play{display:inline-block;}</style>"
+          );
+        }
+      });
+    </script>
+    <span
+      id="skin_right"
+      class="ad-unit"
+      style="
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: calc(50% + 490px);
+        margin-left: 3px;
+        z-index: -99;
+      "
+    ></span>
+    <div
+      id="cb-plus-logout-msg"
+      ng-controller="CBPlusAuth"
+      class="disp-none"
+    ></div>
+  </div>
+</div>
