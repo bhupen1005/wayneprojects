@@ -384,57 +384,96 @@ const maxSum = {
   },
 };
 
-const Factory = {
-  Dialog: {
-    createButton,
-    render,
-  },
-  WindowsDialog: {
-    extends: Dialog,
-    createButton: function () {
-      return new WindowsButton();
-    },
-  },
-  WebDialog: {
-    extends: Dialog,
-    createButton: function () {
-      return new HTMLButton();
-    },
-  },
-  interface: {
-    Button: {
-      render,
-      onClick: () => {},
-    },
-  },
-  WindowsButton: {
-    implements: Button,
-    render: function () {
-      // Render Windows button
-    },
-    onClick: function () {
-      // Handle Windows button click
-    },
-  },
-  HTMLButton: {
-    implements: Button,
-    render: function () {
-      // Render HTML button
-    },
-    onClick: function () {
-      // Handle HTML button click
-    },
-  },
-
-  Application: {
-    config: {
-      conditionOne: {
-        OS: "Windows",
-        dialog: new WindowsDialog(),
+const testing = {
+  _1: {
+    Dialog: {
+      for: { windows, web },
+      methods: {
+        createButton,
+        createDialog,
       },
-      conditionTwo: {
-        OS: "Web",
-        dialog: new WebDialog(),
+      contains: {
+        button,
+      },
+    },
+    button: {
+      for: { windows, web },
+      methods: {
+        render,
+        onClick,
+      },
+    },
+  },
+  _2: {
+    Logistics: {
+      for: { road, sea },
+      methods: {
+        planDelivery,
+        createTransport: () => {
+          if (this instanceof RoadLogistics) {
+            return new Truck();
+          } else if (this instanceof SeaLogistics) {
+            return new Ship();
+          }
+        },
+      },
+    },
+  },
+};
+
+const DesignPatterns = {
+  Factory: {
+    Dialog: {
+      createButton,
+      render,
+    },
+    WindowsDialog: {
+      extends: Dialog,
+      createButton: function () {
+        return new WindowsButton();
+      },
+    },
+    WebDialog: {
+      extends: Dialog,
+      createButton: function () {
+        return new HTMLButton();
+      },
+    },
+    interface: {
+      Button: {
+        render,
+        onClick: () => {},
+      },
+    },
+    WindowsButton: {
+      implements: Button,
+      render: function () {
+        // Render Windows button
+      },
+      onClick: function () {
+        // Handle Windows button click
+      },
+    },
+    HTMLButton: {
+      implements: Button,
+      render: function () {
+        // Render HTML button
+      },
+      onClick: function () {
+        // Handle HTML button click
+      },
+    },
+
+    Application: {
+      config: {
+        conditionOne: {
+          OS: "Windows",
+          dialog: new WindowsDialog(),
+        },
+        conditionTwo: {
+          OS: "Web",
+          dialog: new WebDialog(),
+        },
       },
     },
   },
@@ -1816,5 +1855,1396 @@ const python = {
         columns: () => {},
       },
     },
+  },
+};
+
+const JavaScript = {
+  strings: {
+    english: {
+      length,
+      parts: { slice, substring, concat, split },
+      search: {
+        indexOf,
+        lastIndexOf,
+        includes,
+        startsWith,
+        endsWith,
+        search,
+        match,
+        test,
+        matchAll,
+      },
+      replace: { replace, replaceAll },
+      regex: {
+        match,
+        test,
+      },
+      characters: {
+        charAt,
+        charCodeAt,
+      },
+      cases: {
+        uppercase,
+        lowercase,
+        capitalize,
+      },
+      spacing: {
+        trim,
+        trimStart,
+        trimEnd,
+        padStart,
+        padEnd,
+      },
+    },
+  },
+  arrays: {
+    english: {
+      length,
+      parts: { slice, splice, concat, join },
+      search: {
+        indexOf,
+        lastIndexOf,
+        includes,
+        find,
+        findIndex,
+        findLast,
+        findLastIndex,
+      },
+      iteration: {
+        forEach: {
+          info: "Update something outside the iteration",
+          value,
+          index,
+          array,
+        },
+        map: {
+          info: "Create a new array with the results of calling a provided function on every element in the calling array.",
+          value,
+          index,
+          array,
+        },
+        filter,
+        reduce,
+        reduceRight,
+        every,
+        some,
+        from,
+        keys,
+        entries,
+        with: {},
+        spread,
+      },
+      replace: { replace, replaceAll },
+      sort: { sort, reverse },
+      fill: { fill, copyWithin },
+    },
+  },
+  objects: {
+    accessProperties: {
+      singleProperty,
+      multipleProperties,
+      allButOne,
+      allButTwo,
+    },
+  },
+};
+
+const regex = {
+  references: {
+    _1: "https://www.freecodecamp.org/news/regex-in-javascript/",
+  },
+  encloseBetween: {
+    first: "/pattern/",
+    second: "/pattern/g",
+    third: "/pattern/i",
+    fourth: "/pattern/m",
+    fifth: "/pattern/s",
+  },
+  replaceOccurrences: {
+    first: "string.replace(/pattern/g, 'newValue')",
+    second: "string.replace(/pattern/i, 'newValue')",
+    third: "string.replace(/pattern/m, 'newValue')",
+    fourth: "string.replace(/pattern/s, 'newValue')",
+  },
+  flags: {
+    ignoreFlag: "i", // case insensitive
+    globalFlag: "g", // global search
+    unicodeFlag: "u", // unicode support
+    ignoreWithGlobalFlag: "ig", // case insensitive and global search
+    multilineFlag: {
+      flag: "m", // multiline search
+      example: () => {
+        let str = `1st line
+                    2nd line
+                      3rd line`;
+
+        let re = /^\d/gm;
+
+        let matches = str.match(re);
+
+        console.log(matches); // Output: ["1", "2", "3"]
+      },
+    },
+  },
+  anchors: {
+    start: "^String", // start of the string
+    end: "String$", // end of the string
+  },
+  wordBoundaries: {
+    word: "/\bword\b/", // match only whole words
+  },
+  getCount: {
+    integerCount: {
+      regex: /\d{4}/,
+      example: () => {
+        let str = "1234 5678 91011 121314";
+        let re = /\d{4}/g;
+        let matches = str.match(re);
+        console.log(matches); // Output: ["1234", "5678", "9101", "1213"]
+      },
+    },
+  },
+  integerRange: {
+    example: () => {
+      let str =
+        "The meeting is scheduled for 10:30 AM and ends at 2 PM in 2024";
+      let re = /\d{2,4}/g; // Matches numbers with 2 to 4 digits
+
+      let result = str.match(re); //[("10", "30", "2024")];
+    },
+  },
+  allDigits: {
+    example: () => {
+      let phone = "+1-(103)-777-0101";
+      let result = phone.match(/\d+/g); // Matches one or more digits
+      console.log(result); // Output: ["1", "103", "777", "0101"]
+    },
+  },
+  ZeroOrOne: {
+    writeBefore: "?",
+    example: () => {
+      let str = "The color is red, or blue or green";
+      let re = /red|blue|green?/g; // Matches "red", "blue", or "green"
+      let result = str.match(re); // Output: ["red", "blue", "green"]
+      console.log(result);
+    },
+    exampleInfo: {
+      // Remove red from the string
+      // It will match either one of the two patterns: "red" or "blue" or "green"
+    },
+    example2: () => {
+      let str = "The sky is blue in color, but the ocean is blue in colour";
+      let result = str.match(/colou?r/g); // Matches "color" and "colour"
+      console.log(result); // Output: ["color", "colour"]
+    },
+  },
+  ZeroOreMore: {
+    writeBefore: "*",
+    example: () => {
+      let str = "The color is red, or blue or green";
+      let re = /red|blue|green*/g; // Matches "red", "blue", or "green"
+      let result = str.match(re); // Output: ["red", "blue", "green"]
+      console.log(result);
+      let result1 = "Smile Please 😊".match(/[😒😊🙄]/);
+      console.log(result1); // Output: ["�"]
+    },
+  },
+};
+
+const personalRegex = {
+  sampleOne: {
+    string: "Hello World",
+    tasks: {
+      taskOne: {
+        task: "Replace World with People",
+        solution: () => {
+          let str = "Hello World";
+          let result = str.replace(/World/g, "People");
+          console.log(result); // Output: Hello People
+        },
+      },
+      taskTwo: {
+        task: "Replace Hello with Hi",
+        solution: () => {
+          let str = "Hello World";
+          let result = str.replace(/Hello/g, "Hi");
+          console.log(result); // Output: Hi World
+        },
+      },
+    },
+  },
+  sampleTwo: {
+    string: "Cat, Coat, Cart, Count",
+    tasks: {
+      taskOne: {
+        task: "How may words starts with C",
+        solution: () => {
+          let str = "Cat, Coat, Cart, Count";
+          let result = str.match(/\bC\w+/g);
+          console.log(result); // Output: ["Cat", "Coat", "Cart", "Count"]
+        },
+      },
+      taskTwo: {
+        task: "How many words ends with t",
+        solution: () => {
+          let str = "Cat, Coat, Cart, Count";
+          let result = str.match(/\w+t\b/g);
+          console.log(result); // Output: ["Cat", "Coat", "Cart"]
+        },
+      },
+      taskThree: {
+        tasK: "How many words starts with C and ends with t",
+        solution: () => {
+          let str = "Cat, Coat, Cart, Count";
+          let result = str.match(/\bC\w+t\b/g);
+          console.log(result); // Output: ["Cat", "Coat", "Cart"]
+        },
+      },
+    },
+  },
+  sampleThree: {
+    string: "+91-1234567890",
+    tasks: {
+      taskOne: {
+        task: "How many digits in the string",
+        solution: () => {
+          let str = "+91-1234567890";
+          let result = str.match(/\d+/g);
+          console.log(result); // Output: ["91", "1234567890"]
+        },
+      },
+      taskTwo: {
+        task: "How many digits in the string",
+        solution: () => {
+          let str = "+91-1234567890";
+          let result = str.match(/\d{10}/g);
+          console.log(result); // Output: ["1234567890"]
+        },
+      },
+    },
+  },
+  sampleFour: {
+    string: "A small fox lives into the mountains",
+    tasks: {
+      taskOne: {
+        task: "How many words starts with A",
+        solution: () => {
+          let str = "A small fox lives into the mountains";
+          let result = str.match(/\bA\w?/g);
+          console.log(result); // Output: ["A"]
+        },
+      },
+      taskTwo: {
+        task: "How many words ends with s",
+        solution: () => {
+          let str = "A small fox lives into the mountains";
+          let result = str.match(/\w+s\b/g);
+          console.log(result); // Output: ["lives", "mountains"]
+        },
+      },
+    },
+  },
+  sampleFive: {
+    string: "The sky is blue in color, but the ocean is blue in colour",
+    tasks: {
+      taskOne: {
+        task: "Find color and colour",
+        solution: () => {
+          let str = "The sky is blue in color, but the ocean is blue in colour";
+          let result = str.match(/colou?r/g); // Matches "color" and "colour"
+          console.log(result); // Output: ["color", "colour"]
+        },
+      },
+    },
+  },
+  sampleSix: {
+    passwordString: "Password123!",
+    tasks: {
+      taskOne: {
+        task: "Password should be at least 8 characters long",
+        solution: () => {
+          let str = "Password123!";
+          let result = str.match(/^(?=.{8,})/g); // Matches if password is at least 8 characters long
+          console.log(result); // Output: ["Password123!"]
+        },
+      },
+      taskTwo: {
+        task: "Password should contain at least one uppercase letter",
+        solution: () => {
+          let str = "Password123!";
+          let result = str.match(/(?=.*[A-Z])/g); // Matches if password contains at least one uppercase letter
+          console.log(result); // Output: ["Password123!"]
+        },
+      },
+    },
+  },
+};
+
+const getClassNames = {
+  if: {
+    variable: "headerButtons && isActionHeader",
+    "return ClassName": "tanstack-main-container has-header has-action-header",
+  },
+  elseif_1: {
+    variable: "headerButtons",
+    "return ClassName": "tanstack-main-container has-header",
+  },
+  elseif_2: {
+    variable: "isActionHeader",
+    "return ClassName": `tanstack-main-container has-action-header`,
+  },
+  else: {
+    "return ClassName": "tanstack-main-container",
+  },
+};
+
+const plantUML = {
+  sequenceDiagram: {
+    reference: "https://plantuml.com/sequence-diagram",
+    messages: {
+      fromPointAtoB: {
+        solidLine: "->",
+        dashedLine: "-->",
+        solidWithColor: "-[#red]>",
+      },
+      toPointA: {
+        solidLine: "?->",
+        dashedLine: "?-->", // dashed line to point A
+        solidWithColor: "?-[#red]>",
+        dashedWithColor: "?-[#red]->",
+      },
+    },
+    shapes: {
+      participant: {
+        define: "participant ParticipantName",
+        example: () => {
+          const uml = `@startuml
+          participant User
+          User -> System: Request
+          @enduml`;
+        },
+        participantForMessage: {
+          keyword: "create",
+          define: "create User",
+          use: "Use it Right after creating it",
+        },
+      },
+      actor: {
+        define: "actor ActorName",
+        example: () => {
+          const uml = `@startuml
+          actor User
+          User -> System: Request
+          @enduml`;
+        },
+      },
+      boundary: {},
+      control: {},
+      entity: {},
+      database: {},
+      collections: {},
+      queue: {},
+    },
+    colors: {
+      onActors: {
+        color: "red",
+        example: () => {
+          const uml = `@startuml
+          actor User #red
+          User -> System: Request
+          @enduml`;
+        },
+      },
+      "on Messages | Notes | alt | group": {
+        background: {
+          keyword: "back",
+          define: "<back:#ddd>Text</back>",
+        },
+        fontSize: {
+          keyword: "size",
+          define: "<size:20>Text</size>",
+        },
+        backgroundColorAndFontSize: {
+          define: "<back:#ddd><size:20>Text</size></back>",
+        },
+        example: () => {
+          const uml = `@startuml
+          actor User #red
+          User -> System: Request
+          @enduml`;
+        },
+      },
+    },
+    separators: {
+      actorsVsMessage: {
+        keyword: ":",
+        define: "ActorA -> ActorB : Message",
+      },
+      messageVsMessage: {
+        keyword: "==",
+        define: "== Message ==",
+      },
+    },
+    spacing: {
+      verticalSpacing: {
+        keyword: "|||",
+        define: "|||",
+        use: "between the messages",
+      },
+    },
+    delay: {
+      keyword: "...",
+      define: "...5 minuters later",
+    },
+    containers: {
+      processBox: {
+        starting_the_process_box: {
+          keyword: "alt",
+          define: "alt Starting the process",
+        },
+        starting_the_process_box_with_color: {
+          keyword: "alt",
+          define: "alt#Gold #LightBlue Starting the process",
+        },
+        ending_the_process_box: {
+          define: "end",
+        },
+        process_inside_process: {
+          keyword: "else",
+          define: "else Name of the process",
+        },
+        loops: {
+          start: {
+            keyword: "loop",
+            define: "loop Name of the loop",
+          },
+          end: {
+            define: "end",
+          },
+        },
+        groups: {
+          start: {
+            keyword: "group",
+            define: "group Name of the group",
+            define_with_secondary_name: "group My own [My own component]",
+          },
+          end: {
+            define: "end",
+          },
+        },
+      },
+      box: {
+        starting_the_box: {
+          keyword: "box",
+          define: `box "Name of the box" #color`,
+        },
+        ending_the_box: {
+          keyword: "end box",
+          define: "end box",
+        },
+      },
+    },
+    notes: {
+      forMessages: {
+        singleLine: {
+          define_right: "note right: This is a note",
+          define_left: "note left: This is a note",
+        },
+        multiLine: {
+          starting_the_note: {
+            keyword: "note",
+            direction_keyword: "right|left",
+            define: "note right",
+          },
+          ending_the_note: {
+            keyword: "end note",
+            define: "end note",
+          },
+          example: () => {
+            const uml = `@startuml
+          actor User
+          note left
+            We will call the user
+            Using the API call
+            end note
+          @enduml`;
+          },
+        },
+      },
+      forActors: {
+        singleLine: {
+          define_right: "note right of User: This is a note",
+          define_left: "note left of User: This is a note",
+          define_over: "note over User, System: This is a note",
+        },
+        multiline: {
+          define_left: () => {
+            const uml = `note left of Alice #aqua
+                        This is displayed
+                        left of Alice.
+                        end note`;
+          },
+        },
+      },
+    },
+    lifelines: {
+      searchKeyword: "Lifeline Activation and Destruction",
+      activate: {
+        keyword: "activate",
+        define: "activate User",
+      },
+      deactivate: {
+        keyword: "deactivate",
+        define: "deactivate User",
+      },
+      destroy: {
+        keyword: "destroy",
+        define: "destroy User",
+      },
+    },
+    settings: {
+      skinparam: {
+        sequenceMessageAlign: {
+          define: "skinparam sequenceMessageAlign left",
+          left: "left",
+          right: "right",
+        },
+        sequenceArrowThickness: {
+          define: "skinparam sequenceArrowThickness 2",
+          thickness: "2",
+        },
+        roundCorner: {
+          define: "skinparam roundcorner 20",
+          corner: "20",
+        },
+        sequenceParticipantzUnderline: {
+          define: "skinparam sequenceParticipant underline",
+          underline: "true",
+        },
+      },
+      autonumber: {
+        define_1: "autonumber",
+        define_2_initial_value: "autonumber 1",
+        define_3_initialvalue_plus_addon: "autonumber 1 2",
+        define_4: {
+          position: "In between the message lines",
+        },
+        define_5_with_color_count: 'autonumber "<font color=red><b> 10"',
+        define_5_with_message_and_color_1:
+          'autonumber 40 10 "<font color=red><b>Message 0  "',
+        define_5_multiple_digits: "autonumber 1.1.1",
+        settings: {
+          pause: "autonumber stop",
+          resume: "autonumber resume",
+        },
+      },
+      header: {
+        define: "header HeaderName",
+        define_2: "header HeaderName 1",
+      },
+      footer: {
+        define: "footer FooterName",
+        define_2: "footer FooterName 1",
+      },
+    },
+    examples: {
+      _1: () => {
+        const uml = `
+@startuml
+header App Flow
+footer App Flow
+skinparam sequenceMessageAlign right
+participant App.js as App #red
+participant ErrorBoundary as EB #red
+participant Layout as Layout #red
+participant Router as Router #red
+participant Sidebar.js as Sidebar #yellow
+participant Main.js as Main #pink
+?--> App : app
+?-[#red]-> App : app is here
+?-[#red]-> App : No more
+|||
+[-> App : app
+App -> EB : wraps<size:20>Text</size>
+EB -> Layout : wraps
+Router <- Layout : wraps
+group If route is matched <back:#pink><size:20>Text</size></back>
+Router -[#green]> Sidebar : wraps
+Router -[#green]> Main : wraps
+    else route doesn't match
+    Router -[#red]> Suspense : wraps
+    note left: message <back:teal><size:20>Text</size></back>
+    else Other errors
+    Router -[#red]> Suspense : wraps
+    |||
+    |||
+    group Token is not found <back:#pink><size:20>Text</size></back>
+        group 5 times <back:#pink><size:20>Text</size></back> [a<back:#pink><size:20>Text</size></back>]
+            Router -> Router : Check user token
+            else user logout start
+            Router -[#red]> Suspense : user logout start
+        end
+        |||
+        |||
+        loop Log API Call
+            Router -> Router :<back:#ddd><size:18> //Check// user token</size></back>
+            else user logout start
+            == User Checking ==
+            
+            Router -[#red]> Suspense : user logout start
+            create ErrorMessage
+            Suspense -> ErrorMessage : Create Error Object
+            note left
+            We will call the user
+            Using the API call
+            end note
+        end
+        
+    end
+    
+end
+Main -> Main : Re-renders everytime \nparent component \nre-renders
+ActorA -> ActorB : Message
+@enduml
+
+        `;
+      },
+    },
+  },
+  usecaseDiagram: {
+    reference: "https://plantuml.com/use-case-diagram",
+    usecases: {
+      withKeyword: {
+        keyword: "usecase",
+        define: "usecase (First usecase)",
+      },
+      withoutKeyword: {
+        keyword: "()",
+        define: "(First usecase)",
+      },
+      withAlias: {
+        keyword: "as",
+        define: "(First usecase) as FirstUsecase",
+      },
+    },
+    actors: {
+      withKeyword: {
+        keyword: "actor",
+        define: "actor :First actor:",
+      },
+      withoutKeyword: {
+        keyword: "::",
+        define: ":First Actor:",
+      },
+      withAlias: {
+        keyword: "as",
+        define: ":First actor: as FirstActor",
+      },
+    },
+    separators: {},
+    notes: {},
+    connectors: {
+      vertical: {
+        keyword: "-->",
+        define: "FirstActor --> (FirstUsecase) : Message",
+      },
+      horizontal: {
+        keyword: "->",
+        define: "FirstActor -> (FirstUsecase) : Message",
+      },
+      directions: {
+        left: {
+          keyword: "-left->",
+          define: "FirstActor -left-> (FirstUsecase) : Message",
+        },
+        right: {
+          keyword: "-right->",
+          define: "FirstActor -right-> (FirstUsecase) : Message",
+        },
+        up: {
+          keyword: "-up->",
+          define: "FirstActor -up-> (FirstUsecase) : Message",
+        },
+        down: {
+          keyword: "-down->",
+          define: "FirstActor -down-> (FirstUsecase) : Message",
+        },
+      },
+    },
+    groups: {
+      packages: {
+        keyword: "package",
+        define: "package PackageName { }",
+      },
+      nestedPackages: {
+        keyword: "package",
+        define: "package PackageName { package PackageName { } }",
+      },
+    },
+    extensions: {
+      keyword: "<|--",
+      define: "ActorA <|-- ActorB : Message",
+    },
+    settings: {
+      skinparamActorStyleAwesome: {
+        keyword: "actorStyle",
+        define: "skinparam actorStyle awesome",
+      },
+    },
+  },
+  classDiagram: {
+    arrows: {
+      inheritance: {
+        keyword: "<|--",
+        define: "ClassA <|-- ClassB : Message",
+      },
+      composition: {
+        keyword: "*--",
+        define: "ClassA *-- ClassB : Message",
+      },
+      aggregation: {
+        keyword: "o--",
+        define: "ClassA o-- ClassB : Message",
+      },
+      dependency: {
+        keyword: "..>",
+        define: "ClassA ..> ClassB : Message",
+      },
+    },
+    relations: {
+      oneToMany: {
+        define: `Class01 "1" *-- "many" Class02 : "1 to many"`,
+      },
+      ManyToOne: {
+        define: `Class01 "many" o-- "1" Class02 : "many to one"`,
+      },
+      manyToMany: {
+        define: `Class01 "many" o-- "many" Class02 : "many to many"`,
+      },
+      oneToOne: {
+        define: `Class01 "1" -- "1" Class02 : "one to one"`,
+      },
+      oneToZeroOrOne: {
+        define: `Class01 "1" o-- "0..1" Class02 : "one to zero or one"`,
+      },
+      zeroOrOneToMany: {
+        define: `Class01 "0..1" o-- "many" Class02 : "zero or one to many"`,
+      },
+    },
+    messages: {
+      simpleMessage: {
+        define: "Class01 --> Class02 : Message",
+      },
+      with_arrow_pointing: {
+        define: "Driver - Car : drives >",
+      },
+    },
+    class: {
+      addingMethods: {
+        define: "Class01 : +methodName()",
+      },
+      addingFields: {
+        define: "Class01 : +fieldName",
+      },
+      classGroup: {
+        example_1: () => {
+          const uml = `
+          @startuml
+          class Class01 {
+            +methodName()
+            +fieldName
+          }
+          class Class02 {
+            +methodName()
+            +fieldName
+          }
+          class Class03 {
+            +methodName()
+            +fieldName
+          }
+          Class person {
+            +name
+            +age
+            +email
+            +mobile
+            login()
+            logout()
+          }
+          @enduml
+          `;
+        },
+        example_2: () => {
+          const uml = `
+          @startuml
+          class User {
+            .. Simple Getter ..
+            + getName()
+            + getAddress()
+            .. Some setter ..
+            + setName()
+            __ private data __
+            int age
+            -- encrypted --
+            String password
+          }
+          @enduml
+          `;
+        },
+      },
+      fieldsAndMethods: {
+        private: {
+          define: "-fieldName",
+        },
+        protected: {
+          define: "#fieldName",
+        },
+        package_private: {
+          define: "~fieldName",
+        },
+        public: {
+          define: "+fieldName",
+        },
+      },
+      notes: {},
+    },
+    packages: {},
+  },
+  activityDiagram: {
+    usefulIn: "if else statements, switch case statements, loops",
+    reference: "https://plantuml.com/activity-diagram-beta",
+    howToUse:
+      "Everthing starts with a first step, arrows are created automatically. We can also group the steps",
+    steps: {
+      SimpleStep: {
+        define: ":Step Name;",
+      },
+      conditionalSteps: {
+        ifElse: {
+          define: "if (condition) then (yes)",
+          define_2: "else if then (no)",
+          define_3: "else",
+          define_4: "endif",
+          example: () => {
+            const uml = `
+              @startuml
+              start
+              if(headerButtons && \nisActionHeader) then (true)
+                  :className:\n "tanstack-main-container \nhas-header \nhas-action-header";
+              elseif(headerButtons) then (true)
+                  :className:\n "tanstack-main-container \nhas-header";
+              elseif(isActionHeader) then (true)
+                  :className:\n "tanstack-main-container has-action-header";
+              else
+                  :returnClassName: "tanstack-main-container";
+              end
+              @enduml`;
+          },
+          example_2: () => {
+            const uml = `
+              @startuml
+              start
+              if (condition A) then (yes)
+                :Text 1;
+              elseif (condition B) then (yes)
+                :Text 2;
+                stop
+              (no) elseif (condition C) then (yes)
+                :Text 3;
+              (no) elseif (condition D) then (yes)
+                :Text 4;
+              else (nothing)
+                :Text else;
+              endif
+              stop
+              @enduml
+              `;
+          },
+        },
+      },
+    },
+    groupingSteps: {
+      startingTheGroup: {
+        define: "start",
+      },
+      endingTheGroup: {
+        define: "end",
+      },
+    },
+    loops: {
+      keyword: "repeat",
+      whileLoop: {
+        withWhileKeyword: {
+          howToUse:
+            "Put the condition in the top part of the UML, put the statements in the bottom part",
+          example_1: () => {
+            const uml = `
+            @startuml
+
+              start
+
+              while (data available?)
+                :read data;
+                :generate diagrams;
+              endwhile
+
+              stop
+
+              @enduml
+            `;
+          },
+        },
+        withoutWhileKeyword: {
+          howToUse:
+            "Put the condition in the bottom part of the UML, put the statements in the top part",
+          example_1: () => {
+            const uml = `
+          @startuml
+          start
+          repeat
+            :read data;
+            :generate diagrams;
+          repeat while (more data?) is (yes) not (no)
+          stop
+          @enduml
+          `;
+          },
+        },
+      },
+    },
+  },
+};
+
+const understandLoopToRemoveDuplicate = {
+  tagMap: {},
+  comments: {
+    singleComment: {
+      tags: {
+        tag_1,
+        tag_2,
+        tag_1,
+        tag_4,
+        tag_1,
+      },
+      for_singleComment: {
+        for_tags: {
+          tag_1: {
+            tagMap: {
+              tag_1: true,
+            },
+          },
+        },
+      },
+    },
+  },
+  comments_2: {
+    singleComment: {
+      tags: {
+        tag_1,
+        tag_2,
+        tag_1,
+        tag_4,
+        tag_1,
+      },
+    },
+  },
+  all_tags: {
+    filter: {
+      tag_1: {
+        index: 0,
+        getIndex: () => self.indexOf(tag_1),
+        getIndexValue: 0,
+      },
+      tag_2: {
+        index: 1,
+        getIndex: () => self.indexOf(tag_2),
+        getIndexValue: 1,
+      },
+      tag_1: {
+        index: 2,
+        getIndex: () => self.indexOf(tag_1),
+        getIndexValue: 0,
+      },
+    },
+  },
+};
+
+const understandGroupArray = {
+  updatedTableData: {
+    filter: {
+      rowData: {
+        is_a: "object",
+        condition: "rowData.group===anotherObject.group",
+        ifTrue: {
+          rowData: {},
+        },
+      },
+    },
+  },
+};
+
+const IPL = {
+  teams: {
+    LSG: {
+      Batsmen: [
+        {
+          name: "Aiden Markram",
+          lastInnings: [
+            {
+              runs: 13,
+              balls: 10,
+            },
+            {
+              runs: 9,
+              balls: 11,
+            },
+            {
+              runs: 52,
+              balls: 33,
+            },
+            {
+              runs: 66,
+              balls: 45,
+            },
+            {
+              runs: 6,
+              balls: 6,
+            },
+            {
+              runs: 58,
+              balls: 31,
+            },
+            {
+              runs: 47,
+              balls: 28,
+            },
+            {
+              runs: 53,
+              balls: 38,
+            },
+          ],
+        },
+        {
+          name: "Mitchell Marsh",
+          lastInnings: [
+            {
+              runs: 0,
+              balls: 5,
+            },
+            {
+              runs: 34,
+              balls: 24,
+            },
+            {
+              runs: 45,
+              balls: 36,
+            },
+            {
+              runs: 4,
+              balls: 6,
+            },
+            {
+              runs: 30,
+              balls: 25,
+            },
+            {
+              runs: 81,
+              balls: 48,
+            },
+            {
+              runs: 60,
+              balls: 31,
+            },
+            {
+              runs: 0,
+              balls: 1,
+            },
+          ],
+        },
+        {
+          name: "Nicholas Pooran",
+          lastInnings: [
+            {
+              runs: 6,
+              balls: 5,
+            },
+            {
+              runs: 27,
+              balls: 15,
+            },
+            {
+              runs: 9,
+              balls: 5,
+            },
+            {
+              runs: 11,
+              balls: 8,
+            },
+            {
+              runs: 8,
+              balls: 9,
+            },
+            {
+              runs: 61,
+              balls: 34,
+            },
+            {
+              runs: 87,
+              balls: 36,
+            },
+            {
+              runs: 12,
+              balls: 6,
+            },
+            {
+              runs: 44,
+              balls: 30,
+            },
+            {
+              runs: 70,
+              balls: 26,
+            },
+          ],
+        },
+        {
+          name: "Rishabh Pant",
+          lastInnings: [
+            {
+              runs: 18,
+              balls: 17,
+            },
+            {
+              runs: 4,
+              balls: 2,
+            },
+            {
+              runs: 0,
+              balls: 2,
+            },
+            {
+              runs: 3,
+              balls: 9,
+            },
+            {
+              runs: 63,
+              balls: 49,
+            },
+            {
+              runs: 21,
+              balls: 18,
+            },
+            {
+              runs: 0,
+              balls: 0,
+            },
+            {
+              runs: 2,
+              balls: 6,
+            },
+          ],
+        },
+        {
+          name: "Ayush Badoni",
+          lastInnings: [
+            {
+              runs: 74,
+              balls: 40,
+            },
+            {
+              runs: 35,
+              balls: 22,
+            },
+            {
+              runs: 36,
+              balls: 21,
+            },
+            {
+              runs: 50,
+              balls: 34,
+            },
+            {
+              runs: 22,
+              balls: 17,
+            },
+            {
+              runs: 28,
+              balls: 20,
+            },
+            {
+              runs: 0,
+              balls: 0,
+            },
+            {
+              runs: 30,
+              balls: 19,
+            },
+            {
+              runs: 41,
+              balls: 33,
+            },
+            {
+              runs: 6,
+              balls: 6,
+            },
+          ],
+        },
+        {
+          name: "David Miller",
+          lastInnings: [
+            {
+              runs: 11,
+              balls: 8,
+            },
+            {
+              runs: 24,
+              balls: 16,
+            },
+            {
+              runs: 14,
+              balls: 15,
+            },
+            {
+              runs: 7,
+              balls: 8,
+            },
+            {
+              runs: 0,
+              balls: 0,
+            },
+            {
+              runs: 7,
+              balls: 11,
+            },
+            {
+              runs: 4,
+              balls: 4,
+            },
+            {
+              runs: 27,
+              balls: 14,
+            },
+            {
+              runs: 19,
+              balls: 18,
+            },
+            {
+              runs: 13,
+              balls: 7,
+            },
+          ],
+        },
+        {
+          name: "Abdul Samad",
+          lastInnings: [
+            {
+              runs: 45,
+              balls: 24,
+            },
+            {
+              runs: 2,
+              balls: 4,
+            },
+            {
+              runs: 2,
+              balls: 8,
+            },
+            {
+              runs: 30,
+              balls: 10,
+            },
+            {
+              runs: 20,
+              balls: 11,
+            },
+            {
+              runs: 2,
+              balls: 3,
+            },
+            {
+              runs: 6,
+              balls: 4,
+            },
+            {
+              runs: 4,
+              balls: 2,
+            },
+            {
+              runs: 27,
+              balls: 12,
+            },
+            {
+              runs: 22,
+              balls: 8,
+            },
+          ],
+        },
+        {
+          //
+        },
+      ],
+      Bowlers: [
+        {
+          name: "Shardul Thakur",
+          lastInnings: [
+            {
+              runs: 28,
+              overs: 2,
+              wickets: 0,
+            },
+          ],
+        },
+      ],
+    },
+  },
+};
+
+const Entertainment = {
+  Music: {
+    Artist: {
+      "Dhanda Nyoliwala": {
+        song_1: "Up To U",
+      },
+      Krisna: {
+        song_1: "No Cap",
+        song_2: "I Guess",
+        song_3: "Joota Japani",
+      },
+      Raftaar: {
+        song_1: "Baawe",
+      },
+      "Yo Yo Honey Singh": {
+        song_1: "Maniac",
+      },
+      "Seedhe Maut": {
+        song_1: "Nalla Freestyle",
+      },
+    },
+  },
+  Shows: {
+    HINDI: {},
+    ENGLISH: {
+      RickAndMorty: {
+        seasons: {
+          season_1: {
+            episodes: {
+              episode_1: "Pilot",
+              episode_2: "Lawnmower Dog",
+              episode_3: "Anatomy Park",
+              episode_4: "Simulation Inside a Simulation",
+              episode_5: "Meeseeks and Slippery Stair",
+              episode_6: "Flu Season and Self Burying",
+              episode_7: "Raising Gazorpazorp",
+              episode_8: "Alternate selves, Interdimensional Cable",
+              episode_9: "Mr. Needful the Devil and Pluto is Planet",
+              episode_10: "Rick Council, Morty Shield",
+              episode_11: "Ricksy throws a party and Titanic Ship Trip, Rick Dance",
+            },
+          },
+        },
+      },
+    },
+  },
+  Movies: {
+    HINDI: {},
+    ENGLISH: {},
   },
 };
