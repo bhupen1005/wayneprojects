@@ -3226,7 +3226,7 @@ const Entertainment = {
         seasons: {
           season_1: {
             episodes: {
-              episode_1: "Pilot",
+              episode_1: "Seeds",
               episode_2: "Lawnmower Dog",
               episode_3: "Anatomy Park",
               episode_4: "Simulation Inside a Simulation",
@@ -3236,9 +3236,88 @@ const Entertainment = {
               episode_8: "Alternate selves, Interdimensional Cable",
               episode_9: "Mr. Needful the Devil and Pluto is Planet",
               episode_10: "Rick Council, Morty Shield",
-              episode_11: "Ricksy throws a party and Titanic Ship Trip, Rick Dance",
+              episode_11:
+                "Ricksy throws a party and Titanic Ship Trip, Rick Dance",
             },
           },
+          season_2: {
+            episodes: {
+              episode_1: "",
+              episode_2: "Fart",
+              episode_3: "Unity, Alien Prisoner",
+              episode_4: "",
+              episode_5: "",
+              episode_6: "",
+              episode_7: "",
+            },
+          },
+        },
+      },
+      Dexter: {
+        character_name: [
+          "Dexter Morgan",
+          "Debra Morgan",
+          "Harry Morgan",
+          "Rita Bennett",
+          "Paul Bennett",
+          "Angel Batista",
+          "Vince Masuka",
+          "James Doakes",
+          "Joey Quinn",
+          "LaGuerta",
+          "Hannah McKay",
+          "Rita",
+          "Cody",
+          "Astor",
+          "Camilla",
+        ],
+        season_1: {
+          episode_1: {
+            scenes: ["Mike Donovan, No Blood, Jamie Jaworski, Ice truck"],
+          },
+          episode_2: {
+            scenes: ["Mr. Chambers", "Kara", "Ricky Simmons", "Guerrero"],
+          },
+          episode_3: {
+            scenes: [
+              "Jeremy Downs",
+              "Jeremy's Lawyer",
+              "Paul's Friend",
+              "Tony Tucci",
+              "Morphin Nurse",
+              "Rita's Neighbor",
+              "Nina Batista",
+              "Teenage Dexter",
+              "Teenage Debra",
+              "Young Dexter",
+              "Jorge Castillo",
+              "Valerie Castillo",
+              "Neil Perry",
+              "Shanda",
+              "Rudy Cooper",
+            ],
+          },
+          episode_4: {
+            scenes: ["Oscar", "Doake's Mother"],
+          },
+          episode_8: {
+            scenes: ["Dr. Emmett Meridian"],
+          },
+          episode_10: {
+            scenes: ["Rita's Lawyer"],
+          },
+          episode_12: {
+            scenes: ["Lt. Esme Pascal", "Capt. Tom Matthews"],
+          },
+        },
+        season_2: {
+          episode_1: [
+            "Jimmy the blind man",
+            "Little Chino",
+            "Special Agent Frank Lundy",
+            "Roger Hicks",
+            "Lila",
+          ],
         },
       },
     },
