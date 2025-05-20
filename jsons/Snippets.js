@@ -285,6 +285,31 @@ const LinkedList = {
   deleteLast: function () {},
 };
 
+const Algorithms = {
+  sorting: {
+    bubbleSort: {
+      array: [13, 2, 5, 1, 4, 3],
+      forLoop: {
+        i,
+        swapped: false,
+        items: {},
+        forLoop: {
+          j,
+          items: {},
+          condition: {
+            if: "arr[j] > arr[j + 1]",
+            swap: {
+              temp: arr[j],
+              "arr[j]": arr[j + 1],
+              "arr[j + 1]": temp,
+            },
+          },
+        },
+      },
+    },
+  },
+};
+
 const StaticArrayStack = {
   data: [],
   top: -1,
@@ -1106,6 +1131,7 @@ const InputComponent = {
 };
 
 const InputComponentWithCompoundPattern = {
+  referenceURL: "https://chatgpt.com/c/68006cb2-817c-8004-8312-415a55b42d13",
   "Element One": {
     interface: {
       TextInputProps: {
@@ -1405,14 +1431,35 @@ const CSS = {
 };
 
 const ContextAPI = {
+  reference: "https://chatgpt.com/c/680ca851-a3f8-8004-a040-3dadd3d0d0b2",
+  authReducer: {
+    actions: {
+      type,
+      payload,
+    },
+    state,
+    switch: {
+      cases: {},
+    },
+  },
+  initialState,
+  call_reducer: useReducer(authReducer, initialState),
+  get_from_reducer: [state, dispatch],
   Context: {
+    interfaces,
+    actions,
     createContext: () => {},
   },
   ContextProvider: {
-    initialState,
-    apiCall,
-    functionDefinitions,
-    values: {
+    get_from_reducer: [state, dispatch],
+    apiCall: {
+      canDispatch: {
+        requestAction,
+        successAction,
+        failureAction,
+      },
+    },
+    value: {
       state,
       loginFunction,
       logoutFunction,
@@ -1420,6 +1467,7 @@ const ContextAPI = {
     ProvidorComponent: {
       props: {
         value,
+        children,
       },
     },
     exported: true,
@@ -3295,6 +3343,7 @@ const Entertainment = {
           "Body Bags",
           "GPS Tracker",
           "Tattoo",
+          "Fucking Beef Bus",
         ],
         character_name: [
           "Dexter Morgan",
@@ -3313,12 +3362,56 @@ const Entertainment = {
           "Astor",
           "Camilla",
         ],
+        characters: {
+          paul: {
+            scenes: ["Encounter with Dexter"],
+          },
+        },
+        timeline: {
+          s01: {
+            ep1: [
+              "08:25",
+              "13:45",
+              "16:35 with Dokes",
+              "19:08 with Jamie Jaworski",
+              "22:34 about s*x",
+              "28:28 Jamie Jaworski investigation",
+              "45:20 with LaGuerta",
+            ],
+            ep2: ["08:22", "49:00", "53:40"],
+            ep3: ["07:25", "38:30 with Astor", "48:00"],
+            ep4: ["3:45", "13:35", "18:10 You can't be a bully", "55:20"],
+            ep5: ["03:23"],
+          },
+          s02: {
+            ep7: {
+              t_1: "40:38",
+            },
+            ep9: {
+              t_1: "37:45 worth it",
+              t_2: "41:05 call with Rita",
+              t_3: "45:40 with Dokes",
+            },
+            ep10: {
+              t_1: "3:40 ",
+              t_2: "34:10",
+              t_3: "51:20 In Front of Dokes",
+            },
+            ep11: {
+              t_1: "3:50",
+              t_2: "23:45",
+              t_3: "31:35",
+              t_4: "34:50",
+              t_5: ["44:40"],
+            },
+          },
+        },
         season_1: {
           episode_1: {
             scenes: ["Mike Donovan, No Blood, Jamie Jaworski, Ice truck"],
           },
           episode_2: {
-            scenes: ["Mr. Chambers", "Kara", "Ricky Simmons", "Guerrero"],
+            scenes: ["Kara", "Ricky Simmons", "Guerrero"],
           },
           episode_3: {
             scenes: [
@@ -3446,6 +3539,419 @@ const Entertainment = {
           "Mangapathi",
           "Jabilli",
         ],
+      },
+    },
+  },
+};
+
+const routing = {
+  keywords: ["routing, routes, router"],
+  reference: "https://v5.reactrouter.com/web/guides/quick-start",
+  useAddress: <Link to="/">Home</Link>,
+  groupOfAddress: {
+    switch: {
+      route: {
+        _1: { addressDefine: "/route", componentDefine: <Component /> },
+        _2: { addressDefine: "/route/:id", componentDefine: <Component /> },
+      },
+    },
+  },
+};
+
+const d3js = {
+  axis: {
+    Top: "When we keep the values on the top of the chart",
+    Bottom: "When we keep the values on the bottom of the chart",
+    Left: "When we keep the values on the left of the chart",
+    Right: "When we keep the values on the right of the chart",
+  },
+  d3: {
+    data: {
+      domain: {
+        use: domain([0, 100]), // from 0 to 100
+        with: scaleLinear,
+      },
+      domain_1: {
+        use: domain(d3.extent(data, (d) => d.date)), // from min date to max date
+        with: scaleUtc,
+      },
+      domain_2: {
+        use: domain([0, d3.max(data, (d) => d.value)]), // from 0 to max value
+        with: scaleLinear,
+      },
+      domain_3: {
+        use: domain(d3.sort(data, (d) => -d.frequency).map((d) => d.letter)), // from max frequency to min frequency
+        with: scaleBand,
+      },
+    },
+    range: {
+      array: [marginLeft, width - marginRight],
+    },
+    scales: { scaleUtc, scaleLinear, scaleBand },
+    svgs: {
+      create: {
+        svg_create_1: d3
+          .create("svg")
+          .attr("viewBox", [0, 0, width, height])
+          .attr("width", width)
+          .attr("height", height)
+          .attr("style", "max-width: 100%; height: auto;")
+          .call(zoom), // pass the zoom function
+        svg_create_2,
+      },
+      append: {
+        bars: {
+          append_bar_1: append("g")
+            .attr("class", "bars")
+            .attr("fill", "steelblue")
+            .selectAll("rect")
+            .data(data)
+            .join("rect")
+            .attr("x", (d) => x(d.letter))
+            .attr("y", (d) => y(d.frequency))
+            .attr("height", (d) => y(0) - y(d.frequency))
+            .attr("width", x.bandwidth()),
+        },
+        XAxis: {
+          append_xaxis_1: svg
+            .append("g")
+            .attr("class", "x-axis")
+            .attr("transform", `translate(0,${height - marginBottom})`)
+            .call(xAxis),
+        },
+        YAxis: {
+          append_yaxis_1: svg
+            .append("g")
+            .attr("class", "y-axis")
+            .attr("transform", `translate(${marginLeft},0)`)
+            .call(d3.axisLeft(y))
+            .call((g) => g.select(".domain").remove()),
+        },
+      },
+    },
+    zooms: {
+      zoom_1: function zoom(svg) {
+        const extent = [
+          [marginLeft, marginTop],
+          [width - marginRight, height - marginTop],
+        ];
+
+        svg.call(
+          d3
+            .zoom()
+            .scaleExtent([1, 8])
+            .translateExtent(extent)
+            .extent(extent)
+            .on("zoom", zoomed)
+        );
+
+        function zoomed(event) {
+          x.range(
+            [marginLeft, width - marginRight].map((d) =>
+              event.transform.applyX(d)
+            )
+          );
+          svg
+            .selectAll(".bars rect")
+            .attr("x", (d) => x(d.letter))
+            .attr("width", x.bandwidth());
+          svg.selectAll(".x-axis").call(xAxis);
+        }
+      },
+    },
+  },
+};
+
+const d3Patterns = {
+  empty_Function_Calls: zoom(),
+  function_Calls_With_Array_As_Input: scaleExtent([0.5, 32]),
+  function_Call_With_Message_And_Callback_Function: on("zoom", zoomed),
+  function_call_with_html_element_name: create("svg"),
+  function_call_with_attribute_and_values: attr("viewBox", [
+    0,
+    0,
+    width,
+    height,
+  ]),
+  svg: {
+    function_call_to_add_a_group: svg.append("g"),
+    group: {
+      function_call_to_select_all_path: selectAll("path"),
+      function_call_to_select_all_path_with_data: selectAll("path").data(data),
+      function_call_to_join_path: join("path"),
+      function_call_to_add_attribute: attr("d", arc),
+      function_call_to_add_stroke: attr("stroke", "black"),
+    },
+    function_call_with_a_callback_function: svg.call(zoom),
+    function_call_with_two_callback_functions: call(zoom).call(
+      zoom.transform,
+      d3.zoomIdentity
+    ),
+  },
+};
+
+const understandSVG = {
+  svg: {
+    properties: {
+      width: "for width",
+      height: "for height",
+      viewBox: "for viewBox",
+      xmlns: "for xmlns",
+    },
+    rect: {
+      examples: {
+        ex_1_stroke: (
+          <rect
+            width="300"
+            height="100"
+            x="10"
+            y="10"
+            style="fill:rgb(0,0,255);stroke-width:3;stroke:red"
+          />
+        ),
+        ex_2_opacity: (
+          <rect
+            width="150"
+            height="150"
+            x="10"
+            y="10"
+            style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9"
+          />
+        ),
+      },
+      properties: {
+        x: "for x",
+        y: "for y",
+        width: "for width",
+        height: "for height",
+        fill: "for fill color",
+        rx: "for border radius",
+        ry: "for border radius",
+        style: {
+          fill: "for fill color",
+          strokeWidth: "for border width",
+          stroke: "for border color",
+          fillOpacity: "for fill opacity",
+          strokeOpacity: "for border opacity",
+          opacity: "for opacity",
+        },
+      },
+    },
+    circle: {
+      examples: {
+        e_1: (
+          <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+            <circle r="45" cx="50" cy="50" fill="red" />
+          </svg>
+        ),
+      },
+      properties: {
+        cx: "for x",
+        cy: "for y",
+        r: "for radius",
+        fill: "for fill color",
+        style: {
+          fill: "for fill color",
+          strokeWidth: "for border width",
+          stroke: "for border color",
+          fillOpacity: "for fill opacity",
+          strokeOpacity: "for border opacity",
+          opacity: "for opacity",
+        },
+      },
+    },
+    ellipse: {
+      examples: {
+        e_1: (
+          <svg height="140" width="500" xmlns="http://www.w3.org/2000/svg">
+            <ellipse
+              rx="100"
+              ry="50"
+              cx="120"
+              cy="80"
+              style="fill:yellow;stroke:green;stroke-width:3"
+            />
+          </svg>
+        ),
+        e_2: (
+          <svg height="150" width="500" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="240" cy="100" rx="220" ry="30" fill="purple" />
+            <ellipse cx="220" cy="70" rx="190" ry="20" fill="lime" />
+            <ellipse cx="210" cy="45" rx="170" ry="15" fill="yellow" />
+          </svg>
+        ),
+        e3: {
+          description: "One Yellow and One White",
+          code: (
+            <svg height="100" width="500" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="240" cy="50" rx="220" ry="30" fill="yellow" />
+              <ellipse cx="220" cy="50" rx="190" ry="20" fill="white" />
+            </svg>
+          ),
+        },
+      },
+    },
+    line: {
+      examples: {
+        ex_1: (
+          <svg height="200" width="300" xmlns="http://www.w3.org/2000/svg">
+            <line
+              x1="0"
+              y1="0"
+              x2="300"
+              y2="200"
+              style="stroke:red;stroke-width:2"
+            />
+          </svg>
+        ),
+        ex_2: {
+          description: "Straight Line",
+          code: (
+            <svg height="50" width="300" xmlns="http://www.w3.org/2000/svg">
+              <line
+                x1="0"
+                y1="10"
+                x2="250"
+                y2="10"
+                style="stroke:red;stroke-width:12"
+              />
+            </svg>
+          ),
+        },
+        ex_3: {
+          description: "Vertical Line",
+          code: (
+            <svg height="210" width="300" xmlns="http://www.w3.org/2000/svg">
+              <line
+                x1="0"
+                y1="0"
+                x2="0"
+                y2="200"
+                style="stroke:red;stroke-width:14"
+              />
+            </svg>
+          ),
+        },
+      },
+      properties: {
+        x1: "point distance from left",
+        y1: "point distance from top",
+        x2: "point distance from left",
+        y2: "point distance from top",
+        style: {
+          fill: "for fill color",
+          strokeWidth: "for border width",
+          stroke: "for border color",
+          fillOpacity: "for fill opacity",
+          strokeOpacity: "for border opacity",
+          opacity: "for opacity",
+        },
+      },
+    },
+    polygon: {
+      properties: {
+        points: "for points",
+        points_1: "x1,y1 x2,y2 x3,y3 x4,y4",
+        read_points:
+          "X and Y coordinate are separated by comma and work as a pair.",
+        style: {
+          fill: "for fill color",
+          strokeWidth: "for border width",
+          stroke: "for border color",
+          fillOpacity: "for fill opacity",
+          strokeOpacity: "for border opacity",
+          opacity: "for opacity",
+        },
+      },
+    },
+    polyline: {
+      properties: {
+        points: "for points",
+        points_1: "x1,y1 x2,y2 x3,y3 x4,y4",
+        read_points:
+          "X and Y coordinate are separated by comma and work as a pair.",
+        style: {
+          fill: "for fill color",
+          strokeWidth: "for border width",
+          stroke: "for border color",
+          fillOpacity: "for fill opacity",
+          strokeOpacity: "for border opacity",
+          opacity: "for opacity",
+        },
+      },
+    },
+  },
+};
+
+const animationPrinciples = {
+  speed: "Speed",
+  spacingAndAcceleration: "Spacing & Acceleration",
+  squashAndStretch: "Squash & Stretch",
+  anticipation: "Anticipation",
+  overshoot: "Overshoot",
+  arcs: "Arcs",
+};
+
+const contextAPI = {
+  interface,
+  type,
+  initialState,
+  reducer,
+  ContextProvider,
+  state,
+  dispatch,
+  useContext,
+};
+
+const React = {
+  contextAPI: {
+    interface,
+    type,
+    initialState,
+    reducer,
+    ContextProvider,
+    state,
+    dispatch,
+    useContext,
+  },
+  hooks: {
+    useRef,
+    useState,
+    useReducer,
+    useEffect,
+    useMemo,
+    useCallback,
+  },
+  ReactUtilities: {
+    cloneElementReference:
+      "https://chatgpt.com/c/682ac14a-4ba4-8004-963a-d412a7b23da1",
+    Wrapper,
+    cloneElement: "React.cloneElement",
+    props,
+    children,
+    events,
+  },
+};
+
+const Chess = {
+  e4: {
+    attack: {
+      _1: "The Italian Game",
+      _2: "The Ruy Lopez",
+      _4: "Open Sicilian",
+    },
+    defense: {
+      _3: "Sicilian Defense",
+      _5: "Accelerated Dragon",
+    },
+    e6: {
+      _6: "French Defense",
+      attack: {
+        _8: "Advance Variation",
+        _9: "Tarrasch Variation",
+      },
+      _2: {
+        _7: "Winawer Variation",
       },
     },
   },
