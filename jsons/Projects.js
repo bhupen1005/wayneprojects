@@ -80,12 +80,92 @@ const Ventoux = {
       },
     },
   },
-  Contexts: {},
+  Contexts: {
+    journeyContext: {
+      _0: {
+        // Functions can be kept in a single file or in multiple files
+
+        // Provider Component function
+        // states and functions
+        // returns Context.Provider with value as an object
+
+        // useJourney is a custom hook that returns the context value
+        // when we use useJourney we will not have to import context and useContext in multiple components
+      },
+      _1: {
+        //hook used for validation
+        useJLValidator,
+      },
+      _2: {
+        // Sending it in provider as value
+        // only a boolean flag
+        state: hasJourneysChanged,
+        type: "boolean",
+      },
+      _3: {
+        state: changes,
+        type: "Array",
+        associatedFunctions: () => {
+          dispatch(sendJourneyData(_.values(changes), "JL", api, "JL"))
+        }
+      },
+      _4: {
+        state: journeyListData,
+        associatedFunctions: () => {
+          const [journeys, setJourneys, persistJourneys] = useTempState(
+            journeyListData,
+            (state) => {
+              console.log(state);
+            }
+          )
+        }
+      }
+    },
+  },
   question: [
     {
       q1: "What's the use of resultAPIData.ts",
     },
   ],
+  pages: {
+    PriceScrape: {
+      states: {
+        showFilterToggle: false,
+        clearFilter: false,
+      },
+      functions: {
+        removeFiltersMC: () => {
+          // update the state "clearFilter" to true
+        },
+        handleFilterApplied: () => { },
+      },
+      Components: [
+        {
+          name: TanstackTable,
+          props: {
+            // if we want to show the filters in the table
+            isFilterOn: showFilterToggle,
+            // callback function to be called when the filter is applied
+            onFilterApplied: showFilterToggle,
+            // set true if want to clear the applied filters
+            clearFiltersTrigger: clearFilter,
+          },
+          UI: {
+            filterIconToggle: {
+              onclick: {
+                call: setShowFilterToggle(!showFilterToggle),
+              },
+            },
+            clearFilterIcon: {
+              onclick: {
+                call: removeFiltersMC(),
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
 };
 
 const lambdaFunction = {
@@ -6398,3 +6478,125 @@ const jsonSchema = {
     diagram_depots: null,
   },
 };
+
+const AJV = {
+  // user Object or Car object or Action Rule Object.
+  // a validation object for the [user] object.
+  user: {
+    type: "object",
+    properties: {
+      id: { type: "string" },
+      name: { type: "string" },
+      email: { type: "string" },
+      role: { type: "string" },
+      groups: { type: "array", items: { type: "string" } },
+    },
+    required: ["id", "name", "email", "role"],
+  },
+  // actual object which will be validated with the above schema
+  userObject: {
+    id: "user001",
+    name: "John Doe",
+    email: "abc@gmail.com",
+    role: "admin",
+    groups: ["group1", "group2"],
+  },
+  // we can also use interface, when working with typeScript
+  referenceURL: "https://ajv.js.org/guide/typescript.html",
+
+  // We can also combine multiple schemas using $ref
+  referenceURL2:
+    "https://ajv.js.org/guide/combining-schemas.html#combining-schemas-with-ref",
+
+  // we also have a package for errors
+  referenceURL3: "https://ajv.js.org/packages/ajv-errors.html",
+};
+
+
+const notes = `
+
+bhupendra.godara2025@outlook.com
+pdt.sei-761212
+
+teams:
+H(898922715891ux
+
+
+Pdt.sei-761212rediff - old
+Pdt.seii-761212rediff
+Pdt.seii-761212rediffpp
+bhupendra.godara@q3tech.com
+
+6@82qMhWEkq9M@ - time tracker
+
+pdt.sei-761212jira - jira
+
+Your login details for entering the intranet site are:
+Login ID : Q3-JPR-D-0225857
+Password : aip8eb
+
+pdt.sei-761212qpm
+
+
+Pdtseii-761212redroll
+2585-Q3JPRD0225857
+mypayroll@121P
+
+--------------------------
+
+admin
+Pdt.sei-761212
+
+
+ssh -L 27017:localhost:27017 root@82.29.160.143
+
+mongosh "mongodb://root:Pdt.sei-761212@localhost:27017/admin"
+
+
+----------------------------------------
+
+
+Tinger
+
+Pdt.sei-76@1212 root
+Pdtsei@761212 panel
+ssh root@82.29.160.143
+
+--------------------
+
+Site
+------------------------------------------------------
+IP Address: 82.29.160.143
+Domain Name: https://wordpressdesign.intellectualthief.in
+Site User: intellectualthief
+Password: uAMtXVhrjUvmEKfJLH18
+
+Database
+------------------------------------------------------
+Host: 127.0.0.1
+Port: 3306
+Database Name: intellectualthief-wordpressdesign
+Database User Name: intellectualthief-wordpressdesig
+Database User Password: HCwoRjvXQ1AXKvggGgJQ
+
+WordPress
+------------------------------------------------------
+Admin E-Mail: admin@intellectualthief.in
+Admin User Name: admin
+Admin Password: QuGzepHK2qj4KtYs6J4c
+Admin Url: https://wordpressdesign.intellectualthief.in/wp-admin/
+
+
+
+------
+Cloud
+
+lamagod
+z0f86b9lc3oK2bIY
+
+
+imagekit
+mAPrXdD5T2vj3_7
+`;
+
+
