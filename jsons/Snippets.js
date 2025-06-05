@@ -3,9 +3,9 @@ const form = {
     props: {
       schema: {},
       values: {},
-      onsubmit: () => {},
-      onChange: () => {},
-      oncancel: () => {},
+      onsubmit: () => { },
+      onChange: () => { },
+      oncancel: () => { },
       submitText: "Submit",
     },
     CustomCard: Component,
@@ -40,7 +40,7 @@ const form = {
     Button: {
       props: {
         text: "Submit",
-        onClick: () => {},
+        onClick: () => { },
       },
     },
   },
@@ -62,24 +62,24 @@ const actionRules = {
     props: {
       tableData: {},
       rowSelectionType: "multi",
-      handleRowClick: () => {},
-      handleTableEdit: () => {},
+      handleRowClick: () => { },
+      handleTableEdit: () => { },
       isFilterOn: true,
       nonEditableFields: [],
-      onHandleInlineEdit: () => {},
-      onHandleInlineDelete: () => {},
-      onHandleInlineCopy: () => {},
+      onHandleInlineEdit: () => { },
+      onHandleInlineDelete: () => { },
+      onHandleInlineCopy: () => { },
       keyField: "action_rule",
       isActionButton: true,
       hiddenColumnsData: [],
       editMode: false,
       schemaName: "action_rule_schema",
-      getRowClassname: () => {},
+      getRowClassname: () => { },
       defaultPageSize: 10,
       shouldRowSelectionClear: false,
       isRowExpandable: true,
-      handleRowExpand: () => {},
-      headerButtons: () => {},
+      handleRowExpand: () => { },
+      headerButtons: () => { },
     },
     CustomCard: Component,
     JSX: UI,
@@ -278,11 +278,11 @@ const LinkedList = {
       this.head = node;
     }
   },
-  insertAfter: function () {},
-  insertLast: function () {},
-  deleteFirst: function () {},
-  deleteByValue: function () {},
-  deleteLast: function () {},
+  insertAfter: function () { },
+  insertLast: function () { },
+  deleteFirst: function () { },
+  deleteByValue: function () { },
+  deleteLast: function () { },
 };
 
 const Algorithms = {
@@ -317,11 +317,11 @@ const StaticArrayStack = {
     this.data = new Array(capacity);
     this.top = -1;
   },
-  push: function (value) {},
-  pop: function () {},
-  peek: function () {},
-  isEmpty: function () {},
-  isFull: function () {},
+  push: function (value) { },
+  pop: function () { },
+  peek: function () { },
+  isEmpty: function () { },
+  isFull: function () { },
 };
 
 const DynamicArrayStack = {
@@ -329,10 +329,10 @@ const DynamicArrayStack = {
   DynamicArrayStack: function () {
     this.list = new Array();
   },
-  push: function (value) {},
-  pop: function () {},
-  peek: function () {},
-  isEmpty: function () {},
+  push: function (value) { },
+  pop: function () { },
+  peek: function () { },
+  isEmpty: function () { },
 };
 
 const StaticArrayQueue = {
@@ -346,11 +346,11 @@ const StaticArrayQueue = {
     this.rear = -1;
     this.size = 0;
   },
-  isEmpty: function () {},
-  isFull: function () {},
-  enqueue: function (value) {},
-  dequeue: function () {},
-  peek: function () {},
+  isEmpty: function () { },
+  isFull: function () { },
+  enqueue: function (value) { },
+  dequeue: function () { },
+  peek: function () { },
 };
 
 const DynamicArrayQueue = {
@@ -467,7 +467,7 @@ const DesignPatterns = {
     interface: {
       Button: {
         render,
-        onClick: () => {},
+        onClick: () => { },
       },
     },
     WindowsButton: {
@@ -666,9 +666,9 @@ javascript: (() => {
     "Measure 1 Class": "2STANDARD",
     "Measure 1 OD criteria": "ASD:LKJ",
     "Measure 1 Options": "test_opt",
-    "Measure 2 Class": "2STANDARD",
-    "Measure 2 OD criteria": "ODG_ALL",
-    "Measure 2 Options": "test_opt",
+    // "Measure 2 Class": "2STANDARD",
+    // "Measure 2 OD criteria": "ODG_ALL",
+    // "Measure 2 Options": "test_opt",
     "Action Apply To Class": "2STANDARD",
   };
 
@@ -684,13 +684,13 @@ javascript: (() => {
       first.dispatchEvent(new Event("change", { bubbles: true }));
     }
   }
-  if (second) {
-    const o = [...second.options].find((o) => o.text === "AVAIL_BKT");
-    if (o) {
-      second.value = o.value;
-      second.dispatchEvent(new Event("change", { bubbles: true }));
-    }
-  }
+  // if (second) {
+  //   const o = [...second.options].find((o) => o.text === "AVAIL_BKT");
+  //   if (o) {
+  //     second.value = o.value;
+  //     second.dispatchEvent(new Event("change", { bubbles: true }));
+  //   }
+  // }
   if (third) {
     const o = [...third.options].find((o) => o.text === "PROFILE");
     if (o) {
@@ -1086,7 +1086,7 @@ const InputComponent = {
         type: "text",
         value: "",
         placeholder: "Enter text",
-        onChange: () => {},
+        onChange: () => { },
       },
     },
   },
@@ -1095,7 +1095,7 @@ const InputComponent = {
     Button: {
       props: {
         label: "Submit",
-        onClick: () => {},
+        onClick: () => { },
       },
     },
   },
@@ -1146,7 +1146,7 @@ const InputComponentWithCompoundPattern = {
       props: {
         label: "Enter text",
         value: "",
-        onChange: () => {},
+        onChange: () => { },
         placeholder: "Type something...",
         helperText: "This is a helper text",
       },
@@ -1162,7 +1162,7 @@ const InputComponentWithCompoundPattern = {
     Button: {
       props: {
         label: "Submit",
-        onClick: () => {},
+        onClick: () => { },
       },
     },
   },
@@ -1176,7 +1176,7 @@ const InputComponentWithCompoundPattern = {
     FormField: {
       props: {
         children: "React.ReactNode",
-        onSubmit: () => {},
+        onSubmit: () => { },
       },
     },
   },
@@ -1225,27 +1225,27 @@ const d3Chart = {
   },
   x: {
     d3: {
-      scaleUtc: () => {},
-      domain: () => {},
-      range: () => {},
+      scaleUtc: () => { },
+      domain: () => { },
+      range: () => { },
     },
   },
   y: {
     d3: {
-      scaleLinear: () => {},
-      domain: () => {},
-      range: () => {},
+      scaleLinear: () => { },
+      domain: () => { },
+      range: () => { },
     },
   },
   svg: {
     d3: {
-      create: () => {},
-      attr: () => {},
+      create: () => { },
+      attr: () => { },
     },
-    append: () => {},
-    attr: () => {},
-    call: () => {},
-    node: () => {},
+    append: () => { },
+    attr: () => { },
+    call: () => { },
+    node: () => { },
   },
 };
 
@@ -1261,28 +1261,28 @@ const D3BarChart = {
   },
   x: {
     d3: {
-      scaleBand: () => {},
-      domain: () => {},
-      range: () => {},
-      padding: () => {},
+      scaleBand: () => { },
+      domain: () => { },
+      range: () => { },
+      padding: () => { },
     },
   },
   y: {
     d3: {
-      scaleLinear: () => {},
-      domain: () => {},
-      range: () => {},
+      scaleLinear: () => { },
+      domain: () => { },
+      range: () => { },
     },
   },
   svg: {
     d3: {
-      create: () => {},
-      attr: () => {},
+      create: () => { },
+      attr: () => { },
     },
-    append: () => {},
-    attr: () => {},
-    call: () => {},
-    node: () => {},
+    append: () => { },
+    attr: () => { },
+    call: () => { },
+    node: () => { },
   },
 };
 
@@ -1428,6 +1428,28 @@ const CSS = {
       order: {}, // order of the item in the flex container
     },
   },
+  transforms: {
+    // Rotate, Scale, Translate, Skew
+    // 2D and 3D transformations
+  },
+  movements: {
+    // Move, Slide, Bounce, Shake
+    // Move from position A to position B
+    // Sides : Front, Back, Left, Right, Top, Bottom - ||STORE||
+    // Directions: Up, Down, Left, Right
+  },
+  DOM_FUNCTIONS: {
+    // https://www.w3schools.com/jsref/dom_obj_all.asp
+  },
+  events: {
+    onscroll: {
+      // scrollTop - The gap between the top of the container and the top of the scrollbar
+      // scrollLeft - The gap between the left of the container and the left of the scrollbar
+      // scrollHeight - The total height of the content inside the container
+      // scrollWidth - The total width of the content inside the container
+      // scrollIntoView 
+    }
+  }
 };
 
 const ContextAPI = {
@@ -1448,7 +1470,7 @@ const ContextAPI = {
   Context: {
     interfaces,
     actions,
-    createContext: () => {},
+    createContext: () => { },
   },
   ContextProvider: {
     get_from_reducer: [state, dispatch],
@@ -1897,10 +1919,10 @@ const python = {
           markdown: "st.sidebar.markdown('Sidebar Markdown')",
           code: "st.sidebar.code('Sidebar Code')",
           write: "st.sidebar.write('Sidebar Write')",
-          selectbox: () => {},
+          selectbox: () => { },
         },
-        line_chart: () => {},
-        columns: () => {},
+        line_chart: () => { },
+        columns: () => { },
       },
     },
   },
@@ -3956,3 +3978,540 @@ const Chess = {
     },
   },
 };
+
+const Chunks = {
+  _1: ["Front, Back, Left, Right, Top, Bottom"],
+  _2: ["Elena Gilbert", "Stefan Salvatore", "Damon Salvatore", "Bonnie Bennett", "Caroline Forbes"],
+  _3: ["Rick Sanchez", "Morty Smith", "Summer Smith", "Beth Smith", "Jerry Smith"],
+  _4: ["Dexter Morgan", "Debra Morgan", "Harry Morgan", "Rita Bennett", "Paul Bennett"],
+  _5: ["Klaus Mikaelson", "Elijah Mikaelson", "Rebekah Mikaelson", "Hayley Marshall", "Marcel Gerard"],
+  _6: ["Ragnar Lothbrok", "Lagertha", "Bjorn Ironside", "Floki", "Helga"],
+  _7: ["Will Graham", "Hannibal Lecter", "Jack Crawford", "Bella Crawford", "Alana Bloom"],
+  _8: ["DOM", "BOM", "Web APIS", "JSON", "Graphics"]
+
+}
+
+
+document.querySelectorAll('.ds-table-md .ds-text-tight-m .ds-text-typo');
+
+//Script//
+const elements = document.querySelectorAll('.ds-table-md .ds-text-tight-m .ds-text-typo')
+const oversTitle = document.querySelectorAll(".ds-table .ds-bg-fill-content-prime");
+const oversCounts = Array.from(oversTitle).map(el => el.textContent.trim());
+// overCounts 
+/*
+[
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+]
+*/
+
+// if document.querySelector('.ds-table .ds-bg-fill-content-prime') is 1, 
+// then it is first over, if it is 2 then it is second over and so on.
+
+// we need to extract document.querySelector('.ds-table-md .ds-text-tight-m .ds-text-typo') textContent individually for each over.
+
+
+
+// updated script
+const tables = document.querySelectorAll('table');
+
+let targetTable = null;
+
+tables.forEach(table => {
+  const firstTh = table.querySelector('thead th');
+  if (firstTh && firstTh.textContent.trim() === 'Ovs') {
+    targetTable = table;
+  }
+});
+
+
+const rows = targetTable.querySelectorAll('tbody tr');
+const firstInningsOverDataMatching = Array.from(rows).map((row, i) => {
+  if (row.querySelector(".ds-bg-fill-content-prime").textContent.trim() == i + 1) {
+    const element = row.querySelectorAll('.ds-text-tight-m .ds-text-typo')[0];
+    return element ? element.textContent.trim() : null;
+  }
+});
+const secondInningsOverDataMatching = Array.from(rows).map((row, i) => {
+  if (row.querySelector(".ds-bg-fill-content-prime").textContent.trim() == i + 1) {
+    const element = row.querySelectorAll('.ds-text-tight-m .ds-text-typo')[1];
+    return element ? element.textContent.trim() : null;
+  }
+});
+
+const MatchDataNew = {
+  matchId: document.querySelector(".ds-text-tight-m.ds-font-regular.ds-text-typo-mid3").textContent,
+  teams: {
+    firstTeam: document.querySelector('.ds-p-0 .ci-team-score .ds-mr-1').getAttribute('title'),
+    secondTeam: document.querySelectorAll('.ds-p-0 .ci-team-score .ds-mr-1')[1].getAttribute('title'),
+  },
+  firstInningData: firstInningsOverDataMatching.filter(Boolean).map((item, index) => {
+    const [score, runs, wickets] = item.split('(');
+    const [totalScore, totalWickets] = score.split('/');
+    const [runsScored, wicketsLost] = runs.replace(' runs', '').replace(' wkt)', '').split(',');
+
+    return {
+      index: index + 1,
+      totalScore: parseInt(totalScore),
+      totalWickets: parseInt(totalWickets),
+      runsScored: parseInt(runsScored),
+      wicketsLost: parseInt(wicketsLost)
+    };
+  }),
+  secondInningData: secondInningsOverDataMatching.filter(Boolean).map((item, index) => {
+    const [score, runs, wickets] = item.split('(');
+    const [totalScore, totalWickets] = score.split('/');
+    const [runsScored, wicketsLost] = runs.replace(' runs', '').replace(' wkt)', '').split(',');
+
+    return {
+      index: index + 1,
+      totalScore: parseInt(totalScore),
+      totalWickets: parseInt(totalWickets),
+      runsScored: parseInt(runsScored),
+      wicketsLost: parseInt(wicketsLost)
+    };
+  }),
+}
+
+// updated script
+
+// next page script
+
+function clickNextRepeatedly() {
+  const link = [...document.querySelectorAll('.ds-relative .ds-p-0 .ds-flex .ds-border-ui-stroke a')].find(a =>
+    a.querySelector('span')?.textContent.trim() === 'Next'
+  );
+
+  if (!link) {
+    console.log('No "Next" link found. Stopping.');
+    return;
+  }
+
+  const delay = Math.random() * 4000 + 10000;
+  const delayOver = Math.random() * 4000 + 15000;
+  console.log(`Clicking "Next" in ${Math.round(delay)} ms`);
+
+  setTimeout(() => {
+    const href = link.getAttribute('href');
+    console.log(`Next Link href: ${href}`);
+
+    if (href && (href.startsWith('http') || href === '#')) {
+      const event = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+      });
+      link.dispatchEvent(event);
+    } else {
+      link.click();
+    }
+
+    setTimeout(() => {
+      clickNextRepeatedly();
+    }, 10000);
+  }, delay);
+
+  // 🔁 RE-SELECT "Overs" LINK JUST BEFORE CLICKING
+  setTimeout(() => {
+    const linkOver = [...document.querySelectorAll('a')].find(a =>
+      a.querySelector('span')?.textContent.trim() === 'Overs'
+    );
+
+    if (!linkOver) {
+      console.log('No "Overs" link found at this moment.');
+      return;
+    }
+
+    const href = linkOver.getAttribute('href');
+    console.log(`Overs Link href: ${href}`);
+
+    if (href && (href.startsWith('http') || href === '#')) {
+      const event = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+      });
+      linkOver.dispatchEvent(event);
+    } else {
+      linkOver.click();
+    }
+  }, delayOver);
+}
+
+clickNextRepeatedly();
+
+// next page script
+
+
+
+const structure = {
+  _1: {
+    _1: "GetTable",
+    rows: {
+      _1: "GetRows", // There will be 20 rows
+      row: {
+        condition: "If row.querySelectorAll('.ds-table .ds-bg-fill-content-prime')[i].textContent.trim() == i",
+      }
+    }
+  }
+}
+
+
+
+
+
+const firstInningsOverData = texts.map((text, index) => {
+  //
+});
+
+//
+const texts = Array.from(elements).map(el => el.textContent.trim());
+
+const oddIndexItems = texts.filter((_, i) => i % 2 === 1);
+
+
+// when score was this from this to this over the team crossed the total score of this.
+
+const teams = [...document.querySelectorAll('.ds-p-0 .ci-team-score .ds-mr-1')].map(el => el.getAttribute('title'));
+const MatchData = {
+  teams: {
+    matchId: document.querySelector(".ds-text-tight-m.ds-font-regular.ds-text-typo-mid3").textContent,
+    firstTeam: teams[0],
+    secondTeam: teams[1],
+  },
+  firstInningData: evenIndexItems.map((item, index) => {
+    const [score, runs, wickets] = item.split('(');
+    const [totalScore, totalWickets] = score.split('/');
+    const [runsScored, wicketsLost] = runs.replace(' runs', '').replace(' wkt)', '').split(',');
+
+    return {
+      index: index + 1,
+      totalScore: parseInt(totalScore),
+      totalWickets: parseInt(totalWickets),
+      runsScored: parseInt(runsScored),
+      wicketsLost: parseInt(wicketsLost)
+    };
+  }),
+  secondInningData: oddIndexItems.map((item, index) => {
+    const [score, runs, wickets] = item.split('(');
+    const [totalScore, totalWickets] = score.split('/');
+    const [runsScored, wicketsLost] = runs.replace(' runs', '').replace(' wkt)', '').split(',');
+
+    return {
+      index: index + 1,
+      totalScore: parseInt(totalScore),
+      totalWickets: parseInt(totalWickets),
+      runsScored: parseInt(runsScored),
+      wicketsLost: parseInt(wicketsLost)
+    };
+  }),
+}
+
+//Script//
+
+
+
+const IPLData = [
+  {
+    "teams": {
+      "firstTeam": "Mumbai Indians",
+      "secondTeam": "Punjab Kings"
+    },
+    "firstInningData": [
+      {
+        "index": 1,
+        "totalScore": 4,
+        "totalWickets": 0,
+        "runsScored": 4,
+        "wicketsLost": 0
+      },
+      {
+        "index": 2,
+        "totalScore": 15,
+        "totalWickets": 0,
+        "runsScored": 11,
+        "wicketsLost": 0
+      },
+      {
+        "index": 3,
+        "totalScore": 30,
+        "totalWickets": 1,
+        "runsScored": 15,
+        "wicketsLost": 1
+      },
+      {
+        "index": 4,
+        "totalScore": 43,
+        "totalWickets": 1,
+        "runsScored": 13,
+        "wicketsLost": 0
+      },
+      {
+        "index": 5,
+        "totalScore": 50,
+        "totalWickets": 1,
+        "runsScored": 7,
+        "wicketsLost": 0
+      },
+      {
+        "index": 6,
+        "totalScore": 65,
+        "totalWickets": 1,
+        "runsScored": 15,
+        "wicketsLost": 0
+      },
+      {
+        "index": 7,
+        "totalScore": 70,
+        "totalWickets": 2,
+        "runsScored": 5,
+        "wicketsLost": 1
+      },
+      {
+        "index": 8,
+        "totalScore": 73,
+        "totalWickets": 2,
+        "runsScored": 3,
+        "wicketsLost": 0
+      },
+      {
+        "index": 9,
+        "totalScore": 88,
+        "totalWickets": 2,
+        "runsScored": 15,
+        "wicketsLost": 0
+      },
+      {
+        "index": 10,
+        "totalScore": 102,
+        "totalWickets": 2,
+        "runsScored": 14,
+        "wicketsLost": 0
+      },
+      {
+        "index": 11,
+        "totalScore": 112,
+        "totalWickets": 2,
+        "runsScored": 10,
+        "wicketsLost": 0
+      },
+      {
+        "index": 12,
+        "totalScore": 123,
+        "totalWickets": 2,
+        "runsScored": 11,
+        "wicketsLost": 0
+      },
+      {
+        "index": 13,
+        "totalScore": 131,
+        "totalWickets": 2,
+        "runsScored": 8,
+        "wicketsLost": 0
+      },
+      {
+        "index": 14,
+        "totalScore": 142,
+        "totalWickets": 3,
+        "runsScored": 11,
+        "wicketsLost": 1
+      },
+      {
+        "index": 15,
+        "totalScore": 146,
+        "totalWickets": 4,
+        "runsScored": 4,
+        "wicketsLost": 1
+      },
+      {
+        "index": 16,
+        "totalScore": 156,
+        "totalWickets": 4,
+        "runsScored": 10,
+        "wicketsLost": 0
+      },
+      {
+        "index": 17,
+        "totalScore": 170,
+        "totalWickets": 4,
+        "runsScored": 14,
+        "wicketsLost": 0
+      },
+      {
+        "index": 18,
+        "totalScore": 180,
+        "totalWickets": 5,
+        "runsScored": 10,
+        "wicketsLost": 1
+      },
+      {
+        "index": 19,
+        "totalScore": 193,
+        "totalWickets": 5,
+        "runsScored": 13,
+        "wicketsLost": 0
+      },
+      {
+        "index": 20,
+        "totalScore": 203,
+        "totalWickets": 6,
+        "runsScored": 10,
+        "wicketsLost": 1
+      }
+    ],
+    "secondInningData": [
+      {
+        "index": 1,
+        "totalScore": 6,
+        "totalWickets": 0,
+        "runsScored": 6,
+        "wicketsLost": 0
+      },
+      {
+        "index": 2,
+        "totalScore": 13,
+        "totalWickets": 0,
+        "runsScored": 7,
+        "wicketsLost": 0
+      },
+      {
+        "index": 3,
+        "totalScore": 21,
+        "totalWickets": 1,
+        "runsScored": 8,
+        "wicketsLost": 1
+      },
+      {
+        "index": 4,
+        "totalScore": 35,
+        "totalWickets": 1,
+        "runsScored": 14,
+        "wicketsLost": 0
+      },
+      {
+        "index": 5,
+        "totalScore": 55,
+        "totalWickets": 1,
+        "runsScored": 20,
+        "wicketsLost": 0
+      },
+      {
+        "index": 6,
+        "totalScore": 64,
+        "totalWickets": 2,
+        "runsScored": 9,
+        "wicketsLost": 1
+      },
+      {
+        "index": 7,
+        "totalScore": 70,
+        "totalWickets": 2,
+        "runsScored": 6,
+        "wicketsLost": 0
+      },
+      {
+        "index": 8,
+        "totalScore": 72,
+        "totalWickets": 3,
+        "runsScored": 2,
+        "wicketsLost": 1
+      },
+      {
+        "index": 9,
+        "totalScore": 81,
+        "totalWickets": 3,
+        "runsScored": 9,
+        "wicketsLost": 0
+      },
+      {
+        "index": 10,
+        "totalScore": 98,
+        "totalWickets": 3,
+        "runsScored": 17,
+        "wicketsLost": 0
+      },
+      {
+        "index": 11,
+        "totalScore": 102,
+        "totalWickets": 3,
+        "runsScored": 4,
+        "wicketsLost": 0
+      },
+      {
+        "index": 12,
+        "totalScore": 109,
+        "totalWickets": 3,
+        "runsScored": 7,
+        "wicketsLost": 0
+      },
+      {
+        "index": 13,
+        "totalScore": 128,
+        "totalWickets": 3,
+        "runsScored": 19,
+        "wicketsLost": 0
+      },
+      {
+        "index": 14,
+        "totalScore": 142,
+        "totalWickets": 3,
+        "runsScored": 14,
+        "wicketsLost": 0
+      },
+      {
+        "index": 15,
+        "totalScore": 147,
+        "totalWickets": 3,
+        "runsScored": 5,
+        "wicketsLost": 0
+      },
+      {
+        "index": 16,
+        "totalScore": 163,
+        "totalWickets": 4,
+        "runsScored": 16,
+        "wicketsLost": 1
+      },
+      {
+        "index": 17,
+        "totalScore": 173,
+        "totalWickets": 5,
+        "runsScored": 10,
+        "wicketsLost": 1
+      },
+      {
+        "index": 18,
+        "totalScore": 181,
+        "totalWickets": 5,
+        "runsScored": 8,
+        "wicketsLost": 0
+      },
+      {
+        "index": 19,
+        "totalScore": 207,
+        "totalWickets": 5,
+        "runsScored": 26,
+        "wicketsLost": 0
+      }
+    ]
+  }
+]

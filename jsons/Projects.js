@@ -6398,3 +6398,75 @@ const jsonSchema = {
     diagram_depots: null,
   },
 };
+
+
+const trails = {
+  t1: {
+    class: "HQ_BOOKLOAD_2STANDARD_ODG_ALL_BKT_CLOSE_2STANDARD",
+  },
+  t2: {
+    class: "ARU0104_2004_SAT_Rory_Wills_2024_10_02"
+  },
+  t3: {
+    class: ["ODG_ALL_S25_JL0163", "actionButtonClass"],
+  }
+}
+
+
+const table = {
+  paramSchemaDefinition: {
+    // columnsArray // Everything in the table  
+    // findSchema
+    // tableSchema
+    // shared_schema
+    // schemaData
+    // hanldeCellClick for opening portals
+    // EditableCell 
+  },
+  table: {
+    thead: {
+      // table.getHeaderGroups().map
+      // headerGroup.headers.map
+      // Header values
+      // Sortable Icons UI
+      // Sortable event handlers
+      // Filter UI
+      // Filter event handlers
+    },
+    tbody: {
+      tr: {
+        // rowVirtualizer.getVirtualItems().map
+        // rows
+        // selectedRowStyle
+        td: {
+          // row.getVisibleCells().map
+          // cell values using flexRender
+        }
+      },
+      tr_expanded: {
+        // row.getIsExpanded
+        td: {
+          // colSpan table.getVisibleLeafColumns
+          // handleRowExpand
+          // ParameterTanstackTable
+        }
+      }
+
+    }
+  }
+}
+
+const virtualizedTable = {
+  // columns
+  // containerRef
+  // useVirtualizer
+  // container div
+
+  // -----------------
+
+  // columns
+  // data, fetchNextPage, isFetching, isLoading = useInfiniteQuery
+  // fetchMoreOnBottomReached
+  // rowVirtualizer
+  // Table
+}
